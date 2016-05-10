@@ -7,6 +7,10 @@ import os
 
 app = Flask(__name__)
 
+@app.route('/')
+def firstPage():
+	return "Hello World"
+
 @app.route('/getpointsForUser')
 def api_hello():
 	points = 0
