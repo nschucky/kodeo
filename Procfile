@@ -1,1 +1,1 @@
-web: gunicorn kodeo:app
+web: gunicorn kodeo.py --log-file -
