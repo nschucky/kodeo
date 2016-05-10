@@ -1,1 +1,1 @@
-gunicorn --log-file=- kodeo.wsgi:application
+web: python Kodeo.py
