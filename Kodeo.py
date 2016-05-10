@@ -46,6 +46,5 @@ def api_hello():
 				points += 2
 	return "points: " + str(points)
 
-if __name__ == "__main__":
-	port = int(os.environ.get("PORT", 5000))
-	app.run(debug=True, host='0.0.0.0', port=port)
+if __name__ == '__main__':
+    app.run()
