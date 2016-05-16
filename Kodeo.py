@@ -13,6 +13,7 @@ def firstPage():
 
 @app.route('/getpointsForUser')
 def api_hello():
+	dic = {"totalPoints":0,"PushEvent":0,"PullRequestEvent":0,"IssueCommentEvent":0,"IssueEvent":0}
 	points = 0
 	client_id = "39c9aaea6e3c93cc9247"
 	client_secret = "01203f23db09a26aa448511f9c0ddd68a2f7ad43"
@@ -38,13 +39,22 @@ def api_hello():
 			print commitType
 			if commitType == "PushEvent":
 				points += 3
+				dic["PushEvent"] += 1
+
 			elif commitType == "PullRequestEvent":
 				points += 4
-			elif commitType == "CommentEvent":
+				dic["PullRequestEvent"] += 1
+
+			elif commitType == "IssueCommentEvent":
 				points += 1
+				dic["IssueCommentEvent"] += 1
+
 			elif commitType == "IssueEvent":
 				points += 2
-	return "points: " + str(points)
+				dic["IssueEvent"] += 1
+
+	dic["totalPoints"] = points
+	return str(json.dumps(dic))
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
