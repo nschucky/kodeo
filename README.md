@@ -1,7 +1,9 @@
 # Kodeo
+###**[Click here](https://kodeo.herokuapp.com/getpointsForUser?user=lfarah) to test**
 
 ##About
 **Kodeo** is a game where devs compete for Github contributions
+
 
 ##Rules
 | Event        | Points |
