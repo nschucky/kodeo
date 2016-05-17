@@ -13,13 +13,14 @@ def firstPage():
 
 @app.route('/getpointsForUser')
 def api_hello():
-	dic = {"totalPoints":0,"PushEvent":0,"PullRequestEvent":0,"IssueCommentEvent":0,"IssueEvent":0}
+	dic = {"username": "", "userPic": "", "totalPoints":0,"PushEvent":0,"PullRequestEvent":0,"IssueCommentEvent":0,"IssueEvent":0}
 	points = 0
 	client_id = "39c9aaea6e3c93cc9247"
 	client_secret = "01203f23db09a26aa448511f9c0ddd68a2f7ad43"
 	user = request.args['user']
 	date2Str = datetime.fromtimestamp(time.time()).strftime('%Y-%m-%dT%H:%M:%SZ')
 	currentDate = datetime.strptime(date2Str,'%Y-%m-%dT%H:%M:%SZ')
+
 
 	for i in range(0,10):
 		url = "https://api.github.com/users/" + user + "/events?page=" + str(i) + "&client_id=" + client_id + "&client_secret=" + client_secret
@@ -28,7 +29,12 @@ def api_hello():
 		data = json.loads(response.read())
 		print len(data)
 
-		dateStr = data[0]["created_at"]
+		#Username & pic
+		if dic["userPic"] == "":
+			dic["userPic"] = data[0]["actor"]["avatar_url"]
+			dic["username"] = data[0]["actor"]["login"]
+
+ 		dateStr = data[0]["created_at"]
 		commitDate = datetime.strptime(dateStr,'%Y-%m-%dT%H:%M:%SZ')
 		if abs(currentDate - commitDate).days >= 10:
 			break	
