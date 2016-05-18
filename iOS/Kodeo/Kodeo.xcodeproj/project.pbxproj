@@ -1,1117 +1,597 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>18B0E0B25722D1E8D4772792</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-Kodeo.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-Kodeo/Pods-Kodeo.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6D8E6A20FFF65D9C8DFD3946</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods_Kodeo.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>88D42418E172B8DC92D015A4</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>8E064299E9F22E6F9BB32EAF</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>6D8E6A20FFF65D9C8DFD3946</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8EA04AF0BBC1CED2A400A31E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>6D8E6A20FFF65D9C8DFD3946</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>980AD53574269FBC2D7C037A</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Embed Pods Frameworks</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-Kodeo/Pods-Kodeo-frameworks.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>B2553510E4659E8638847BB5</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-Kodeo.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-Kodeo/Pods-Kodeo.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C24771281CEA95C000D67B3B</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C24771331CEA95C000D67B3B</string>
-				<string>C24771481CEA95C000D67B3B</string>
-				<string>C24771531CEA95C000D67B3B</string>
-				<string>C24771321CEA95C000D67B3B</string>
-				<string>DEBB6DCC0C7F3564A1DF19F2</string>
-				<string>8E064299E9F22E6F9BB32EAF</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C24771291CEA95C000D67B3B</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastSwiftUpdateCheck</key>
-				<string>0730</string>
-				<key>LastUpgradeCheck</key>
-				<string>0730</string>
-				<key>ORGANIZATIONNAME</key>
-				<string>Lucas Farah</string>
-				<key>TargetAttributes</key>
-				<dict>
-					<key>C24771301CEA95C000D67B3B</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>7.3</string>
-					</dict>
-					<key>C24771441CEA95C000D67B3B</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>7.3</string>
-						<key>TestTargetID</key>
-						<string>C24771301CEA95C000D67B3B</string>
-					</dict>
-					<key>C247714F1CEA95C000D67B3B</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>7.3</string>
-						<key>TestTargetID</key>
-						<string>C24771301CEA95C000D67B3B</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>C247712C1CEA95C000D67B3B</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-				<string>Base</string>
-			</array>
-			<key>mainGroup</key>
-			<string>C24771281CEA95C000D67B3B</string>
-			<key>productRefGroup</key>
-			<string>C24771321CEA95C000D67B3B</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>C24771301CEA95C000D67B3B</string>
-				<string>C24771441CEA95C000D67B3B</string>
-				<string>C247714F1CEA95C000D67B3B</string>
-			</array>
-		</dict>
-		<key>C247712C1CEA95C000D67B3B</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>C24771571CEA95C000D67B3B</string>
-				<string>C24771581CEA95C000D67B3B</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>C247712D1CEA95C000D67B3B</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>C24771371CEA95C000D67B3B</string>
-				<string>C24771351CEA95C000D67B3B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>C247712E1CEA95C000D67B3B</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>8EA04AF0BBC1CED2A400A31E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>C247712F1CEA95C000D67B3B</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>C247713F1CEA95C000D67B3B</string>
-				<string>C247713C1CEA95C000D67B3B</string>
-				<string>C247713A1CEA95C000D67B3B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>C24771301CEA95C000D67B3B</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>C24771591CEA95C000D67B3B</string>
-			<key>buildPhases</key>
-			<array>
-				<string>88D42418E172B8DC92D015A4</string>
-				<string>C247712D1CEA95C000D67B3B</string>
-				<string>C247712E1CEA95C000D67B3B</string>
-				<string>C247712F1CEA95C000D67B3B</string>
-				<string>980AD53574269FBC2D7C037A</string>
-				<string>CF0CB95D6672DBC3634F6610</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Kodeo</string>
-			<key>productName</key>
-			<string>Kodeo</string>
-			<key>productReference</key>
-			<string>C24771311CEA95C000D67B3B</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application</string>
-		</dict>
-		<key>C24771311CEA95C000D67B3B</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Kodeo.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>C24771321CEA95C000D67B3B</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C24771311CEA95C000D67B3B</string>
-				<string>C24771451CEA95C000D67B3B</string>
-				<string>C24771501CEA95C000D67B3B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C24771331CEA95C000D67B3B</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C24771341CEA95C000D67B3B</string>
-				<string>C24771361CEA95C000D67B3B</string>
-				<string>C24771381CEA95C000D67B3B</string>
-				<string>C247713B1CEA95C000D67B3B</string>
-				<string>C247713D1CEA95C000D67B3B</string>
-				<string>C24771401CEA95C000D67B3B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Kodeo</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C24771341CEA95C000D67B3B</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>AppDelegate.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C24771351CEA95C000D67B3B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C24771341CEA95C000D67B3B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C24771361CEA95C000D67B3B</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>ViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C24771371CEA95C000D67B3B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C24771361CEA95C000D67B3B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C24771381CEA95C000D67B3B</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C24771391CEA95C000D67B3B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C24771391CEA95C000D67B3B</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C247713A1CEA95C000D67B3B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C24771381CEA95C000D67B3B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C247713B1CEA95C000D67B3B</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>folder.assetcatalog</string>
-			<key>path</key>
-			<string>Assets.xcassets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C247713C1CEA95C000D67B3B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C247713B1CEA95C000D67B3B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C247713D1CEA95C000D67B3B</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C247713E1CEA95C000D67B3B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>LaunchScreen.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C247713E1CEA95C000D67B3B</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/LaunchScreen.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C247713F1CEA95C000D67B3B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C247713D1CEA95C000D67B3B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C24771401CEA95C000D67B3B</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C24771411CEA95C000D67B3B</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>C247714A1CEA95C000D67B3B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>C24771421CEA95C000D67B3B</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>C24771431CEA95C000D67B3B</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>C24771441CEA95C000D67B3B</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>C247715C1CEA95C000D67B3B</string>
-			<key>buildPhases</key>
-			<array>
-				<string>C24771411CEA95C000D67B3B</string>
-				<string>C24771421CEA95C000D67B3B</string>
-				<string>C24771431CEA95C000D67B3B</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>C24771471CEA95C000D67B3B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>KodeoTests</string>
-			<key>productName</key>
-			<string>KodeoTests</string>
-			<key>productReference</key>
-			<string>C24771451CEA95C000D67B3B</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.unit-test</string>
-		</dict>
-		<key>C24771451CEA95C000D67B3B</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>KodeoTests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>C24771461CEA95C000D67B3B</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>C24771291CEA95C000D67B3B</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>C24771301CEA95C000D67B3B</string>
-			<key>remoteInfo</key>
-			<string>Kodeo</string>
-		</dict>
-		<key>C24771471CEA95C000D67B3B</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>C24771301CEA95C000D67B3B</string>
-			<key>targetProxy</key>
-			<string>C24771461CEA95C000D67B3B</string>
-		</dict>
-		<key>C24771481CEA95C000D67B3B</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C24771491CEA95C000D67B3B</string>
-				<string>C247714B1CEA95C000D67B3B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>KodeoTests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C24771491CEA95C000D67B3B</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>KodeoTests.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C247714A1CEA95C000D67B3B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C24771491CEA95C000D67B3B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C247714B1CEA95C000D67B3B</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C247714C1CEA95C000D67B3B</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>C24771551CEA95C000D67B3B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>C247714D1CEA95C000D67B3B</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>C247714E1CEA95C000D67B3B</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>C247714F1CEA95C000D67B3B</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>C247715F1CEA95C000D67B3B</string>
-			<key>buildPhases</key>
-			<array>
-				<string>C247714C1CEA95C000D67B3B</string>
-				<string>C247714D1CEA95C000D67B3B</string>
-				<string>C247714E1CEA95C000D67B3B</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>C24771521CEA95C000D67B3B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>KodeoUITests</string>
-			<key>productName</key>
-			<string>KodeoUITests</string>
-			<key>productReference</key>
-			<string>C24771501CEA95C000D67B3B</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.ui-testing</string>
-		</dict>
-		<key>C24771501CEA95C000D67B3B</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>KodeoUITests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>C24771511CEA95C000D67B3B</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>C24771291CEA95C000D67B3B</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>C24771301CEA95C000D67B3B</string>
-			<key>remoteInfo</key>
-			<string>Kodeo</string>
-		</dict>
-		<key>C24771521CEA95C000D67B3B</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>C24771301CEA95C000D67B3B</string>
-			<key>targetProxy</key>
-			<string>C24771511CEA95C000D67B3B</string>
-		</dict>
-		<key>C24771531CEA95C000D67B3B</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C24771541CEA95C000D67B3B</string>
-				<string>C24771561CEA95C000D67B3B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>KodeoUITests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C24771541CEA95C000D67B3B</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>KodeoUITests.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C24771551CEA95C000D67B3B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C24771541CEA95C000D67B3B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C24771561CEA95C000D67B3B</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C24771571CEA95C000D67B3B</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_ANALYZER_NONNULL</key>
-				<string>YES</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>ENABLE_TESTABILITY</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.3</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Onone</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>C24771581CEA95C000D67B3B</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_ANALYZER_NONNULL</key>
-				<string>YES</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf-with-dsym</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.3</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>C24771591CEA95C000D67B3B</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>C247715A1CEA95C000D67B3B</string>
-				<string>C247715B1CEA95C000D67B3B</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>C247715A1CEA95C000D67B3B</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>B2553510E4659E8638847BB5</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Kodeo/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>farah.lucas.Kodeo</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>C247715B1CEA95C000D67B3B</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>18B0E0B25722D1E8D4772792</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Kodeo/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>farah.lucas.Kodeo</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>C247715C1CEA95C000D67B3B</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>C247715D1CEA95C000D67B3B</string>
-				<string>C247715E1CEA95C000D67B3B</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>C247715D1CEA95C000D67B3B</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>INFOPLIST_FILE</key>
-				<string>KodeoTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>farah.lucas.KodeoTests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/Kodeo.app/Kodeo</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>C247715E1CEA95C000D67B3B</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>INFOPLIST_FILE</key>
-				<string>KodeoTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>farah.lucas.KodeoTests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/Kodeo.app/Kodeo</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>C247715F1CEA95C000D67B3B</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>C24771601CEA95C000D67B3B</string>
-				<string>C24771611CEA95C000D67B3B</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>C24771601CEA95C000D67B3B</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>INFOPLIST_FILE</key>
-				<string>KodeoUITests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>farah.lucas.KodeoUITests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_TARGET_NAME</key>
-				<string>Kodeo</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>C24771611CEA95C000D67B3B</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>INFOPLIST_FILE</key>
-				<string>KodeoUITests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>farah.lucas.KodeoUITests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_TARGET_NAME</key>
-				<string>Kodeo</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>CF0CB95D6672DBC3634F6610</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-Kodeo/Pods-Kodeo-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>DEBB6DCC0C7F3564A1DF19F2</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>B2553510E4659E8638847BB5</string>
-				<string>18B0E0B25722D1E8D4772792</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>C24771291CEA95C000D67B3B</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8EA04AF0BBC1CED2A400A31E /* Pods_Kodeo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D8E6A20FFF65D9C8DFD3946 /* Pods_Kodeo.framework */; };
+		C24771351CEA95C000D67B3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24771341CEA95C000D67B3B /* AppDelegate.swift */; };
+		C24771371CEA95C000D67B3B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24771361CEA95C000D67B3B /* ViewController.swift */; };
+		C247713A1CEA95C000D67B3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C24771381CEA95C000D67B3B /* Main.storyboard */; };
+		C247713C1CEA95C000D67B3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C247713B1CEA95C000D67B3B /* Assets.xcassets */; };
+		C247713F1CEA95C000D67B3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C247713D1CEA95C000D67B3B /* LaunchScreen.storyboard */; };
+		C247714A1CEA95C000D67B3B /* KodeoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24771491CEA95C000D67B3B /* KodeoTests.swift */; };
+		C24771551CEA95C000D67B3B /* KodeoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24771541CEA95C000D67B3B /* KodeoUITests.swift */; };
+		C2F3D8D31CED2FAF0064DF4B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F3D8D21CED2FAF0064DF4B /* User.swift */; };
+		C2F3D8D51CED323B0064DF4B /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F3D8D41CED323B0064DF4B /* UserManager.swift */; };
+		C2F3D8D71CED33FB0064DF4B /* Netwerker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F3D8D61CED33FB0064DF4B /* Netwerker.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C24771461CEA95C000D67B3B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C24771291CEA95C000D67B3B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C24771301CEA95C000D67B3B;
+			remoteInfo = Kodeo;
+		};
+		C24771511CEA95C000D67B3B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C24771291CEA95C000D67B3B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C24771301CEA95C000D67B3B;
+			remoteInfo = Kodeo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		18B0E0B25722D1E8D4772792 /* Pods-Kodeo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kodeo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kodeo/Pods-Kodeo.release.xcconfig"; sourceTree = "<group>"; };
+		6D8E6A20FFF65D9C8DFD3946 /* Pods_Kodeo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kodeo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2553510E4659E8638847BB5 /* Pods-Kodeo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kodeo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kodeo/Pods-Kodeo.debug.xcconfig"; sourceTree = "<group>"; };
+		C24771311CEA95C000D67B3B /* Kodeo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kodeo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C24771341CEA95C000D67B3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C24771361CEA95C000D67B3B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C24771391CEA95C000D67B3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C247713B1CEA95C000D67B3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C247713E1CEA95C000D67B3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C24771401CEA95C000D67B3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C24771451CEA95C000D67B3B /* KodeoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KodeoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C24771491CEA95C000D67B3B /* KodeoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KodeoTests.swift; sourceTree = "<group>"; };
+		C247714B1CEA95C000D67B3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C24771501CEA95C000D67B3B /* KodeoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KodeoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C24771541CEA95C000D67B3B /* KodeoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KodeoUITests.swift; sourceTree = "<group>"; };
+		C24771561CEA95C000D67B3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2F3D8D21CED2FAF0064DF4B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C2F3D8D41CED323B0064DF4B /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		C2F3D8D61CED33FB0064DF4B /* Netwerker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Netwerker.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C247712E1CEA95C000D67B3B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EA04AF0BBC1CED2A400A31E /* Pods_Kodeo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C24771421CEA95C000D67B3B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C247714D1CEA95C000D67B3B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8E064299E9F22E6F9BB32EAF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6D8E6A20FFF65D9C8DFD3946 /* Pods_Kodeo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C24771281CEA95C000D67B3B = {
+			isa = PBXGroup;
+			children = (
+				C24771331CEA95C000D67B3B /* Kodeo */,
+				C24771481CEA95C000D67B3B /* KodeoTests */,
+				C24771531CEA95C000D67B3B /* KodeoUITests */,
+				C24771321CEA95C000D67B3B /* Products */,
+				DEBB6DCC0C7F3564A1DF19F2 /* Pods */,
+				8E064299E9F22E6F9BB32EAF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C24771321CEA95C000D67B3B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C24771311CEA95C000D67B3B /* Kodeo.app */,
+				C24771451CEA95C000D67B3B /* KodeoTests.xctest */,
+				C24771501CEA95C000D67B3B /* KodeoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C24771331CEA95C000D67B3B /* Kodeo */ = {
+			isa = PBXGroup;
+			children = (
+				C24771341CEA95C000D67B3B /* AppDelegate.swift */,
+				C24771361CEA95C000D67B3B /* ViewController.swift */,
+				C2F3D8D21CED2FAF0064DF4B /* User.swift */,
+				C2F3D8D41CED323B0064DF4B /* UserManager.swift */,
+				C2F3D8D61CED33FB0064DF4B /* Netwerker.swift */,
+				C24771381CEA95C000D67B3B /* Main.storyboard */,
+				C247713B1CEA95C000D67B3B /* Assets.xcassets */,
+				C247713D1CEA95C000D67B3B /* LaunchScreen.storyboard */,
+				C24771401CEA95C000D67B3B /* Info.plist */,
+			);
+			path = Kodeo;
+			sourceTree = "<group>";
+		};
+		C24771481CEA95C000D67B3B /* KodeoTests */ = {
+			isa = PBXGroup;
+			children = (
+				C24771491CEA95C000D67B3B /* KodeoTests.swift */,
+				C247714B1CEA95C000D67B3B /* Info.plist */,
+			);
+			path = KodeoTests;
+			sourceTree = "<group>";
+		};
+		C24771531CEA95C000D67B3B /* KodeoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C24771541CEA95C000D67B3B /* KodeoUITests.swift */,
+				C24771561CEA95C000D67B3B /* Info.plist */,
+			);
+			path = KodeoUITests;
+			sourceTree = "<group>";
+		};
+		DEBB6DCC0C7F3564A1DF19F2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B2553510E4659E8638847BB5 /* Pods-Kodeo.debug.xcconfig */,
+				18B0E0B25722D1E8D4772792 /* Pods-Kodeo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C24771301CEA95C000D67B3B /* Kodeo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C24771591CEA95C000D67B3B /* Build configuration list for PBXNativeTarget "Kodeo" */;
+			buildPhases = (
+				88D42418E172B8DC92D015A4 /* Check Pods Manifest.lock */,
+				C247712D1CEA95C000D67B3B /* Sources */,
+				C247712E1CEA95C000D67B3B /* Frameworks */,
+				C247712F1CEA95C000D67B3B /* Resources */,
+				980AD53574269FBC2D7C037A /* Embed Pods Frameworks */,
+				CF0CB95D6672DBC3634F6610 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Kodeo;
+			productName = Kodeo;
+			productReference = C24771311CEA95C000D67B3B /* Kodeo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C24771441CEA95C000D67B3B /* KodeoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C247715C1CEA95C000D67B3B /* Build configuration list for PBXNativeTarget "KodeoTests" */;
+			buildPhases = (
+				C24771411CEA95C000D67B3B /* Sources */,
+				C24771421CEA95C000D67B3B /* Frameworks */,
+				C24771431CEA95C000D67B3B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C24771471CEA95C000D67B3B /* PBXTargetDependency */,
+			);
+			name = KodeoTests;
+			productName = KodeoTests;
+			productReference = C24771451CEA95C000D67B3B /* KodeoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C247714F1CEA95C000D67B3B /* KodeoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C247715F1CEA95C000D67B3B /* Build configuration list for PBXNativeTarget "KodeoUITests" */;
+			buildPhases = (
+				C247714C1CEA95C000D67B3B /* Sources */,
+				C247714D1CEA95C000D67B3B /* Frameworks */,
+				C247714E1CEA95C000D67B3B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C24771521CEA95C000D67B3B /* PBXTargetDependency */,
+			);
+			name = KodeoUITests;
+			productName = KodeoUITests;
+			productReference = C24771501CEA95C000D67B3B /* KodeoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C24771291CEA95C000D67B3B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Lucas Farah";
+				TargetAttributes = {
+					C24771301CEA95C000D67B3B = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					C24771441CEA95C000D67B3B = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = C24771301CEA95C000D67B3B;
+					};
+					C247714F1CEA95C000D67B3B = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = C24771301CEA95C000D67B3B;
+					};
+				};
+			};
+			buildConfigurationList = C247712C1CEA95C000D67B3B /* Build configuration list for PBXProject "Kodeo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C24771281CEA95C000D67B3B;
+			productRefGroup = C24771321CEA95C000D67B3B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C24771301CEA95C000D67B3B /* Kodeo */,
+				C24771441CEA95C000D67B3B /* KodeoTests */,
+				C247714F1CEA95C000D67B3B /* KodeoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C247712F1CEA95C000D67B3B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C247713F1CEA95C000D67B3B /* LaunchScreen.storyboard in Resources */,
+				C247713C1CEA95C000D67B3B /* Assets.xcassets in Resources */,
+				C247713A1CEA95C000D67B3B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C24771431CEA95C000D67B3B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C247714E1CEA95C000D67B3B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		88D42418E172B8DC92D015A4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		980AD53574269FBC2D7C037A /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Kodeo/Pods-Kodeo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF0CB95D6672DBC3634F6610 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Kodeo/Pods-Kodeo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C247712D1CEA95C000D67B3B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C24771371CEA95C000D67B3B /* ViewController.swift in Sources */,
+				C24771351CEA95C000D67B3B /* AppDelegate.swift in Sources */,
+				C2F3D8D51CED323B0064DF4B /* UserManager.swift in Sources */,
+				C2F3D8D31CED2FAF0064DF4B /* User.swift in Sources */,
+				C2F3D8D71CED33FB0064DF4B /* Netwerker.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C24771411CEA95C000D67B3B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C247714A1CEA95C000D67B3B /* KodeoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C247714C1CEA95C000D67B3B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C24771551CEA95C000D67B3B /* KodeoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C24771471CEA95C000D67B3B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C24771301CEA95C000D67B3B /* Kodeo */;
+			targetProxy = C24771461CEA95C000D67B3B /* PBXContainerItemProxy */;
+		};
+		C24771521CEA95C000D67B3B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C24771301CEA95C000D67B3B /* Kodeo */;
+			targetProxy = C24771511CEA95C000D67B3B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C24771381CEA95C000D67B3B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C24771391CEA95C000D67B3B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C247713D1CEA95C000D67B3B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C247713E1CEA95C000D67B3B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C24771571CEA95C000D67B3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C24771581CEA95C000D67B3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C247715A1CEA95C000D67B3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2553510E4659E8638847BB5 /* Pods-Kodeo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Kodeo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = farah.lucas.Kodeo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C247715B1CEA95C000D67B3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18B0E0B25722D1E8D4772792 /* Pods-Kodeo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Kodeo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = farah.lucas.Kodeo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C247715D1CEA95C000D67B3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = KodeoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = farah.lucas.KodeoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kodeo.app/Kodeo";
+			};
+			name = Debug;
+		};
+		C247715E1CEA95C000D67B3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = KodeoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = farah.lucas.KodeoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kodeo.app/Kodeo";
+			};
+			name = Release;
+		};
+		C24771601CEA95C000D67B3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = KodeoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = farah.lucas.KodeoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Kodeo;
+			};
+			name = Debug;
+		};
+		C24771611CEA95C000D67B3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = KodeoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = farah.lucas.KodeoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Kodeo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C247712C1CEA95C000D67B3B /* Build configuration list for PBXProject "Kodeo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C24771571CEA95C000D67B3B /* Debug */,
+				C24771581CEA95C000D67B3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C24771591CEA95C000D67B3B /* Build configuration list for PBXNativeTarget "Kodeo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C247715A1CEA95C000D67B3B /* Debug */,
+				C247715B1CEA95C000D67B3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C247715C1CEA95C000D67B3B /* Build configuration list for PBXNativeTarget "KodeoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C247715D1CEA95C000D67B3B /* Debug */,
+				C247715E1CEA95C000D67B3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C247715F1CEA95C000D67B3B /* Build configuration list for PBXNativeTarget "KodeoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C24771601CEA95C000D67B3B /* Debug */,
+				C24771611CEA95C000D67B3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C24771291CEA95C000D67B3B /* Project object */;
+}

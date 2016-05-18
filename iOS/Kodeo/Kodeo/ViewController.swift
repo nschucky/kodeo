@@ -7,41 +7,27 @@
 //
 
 import UIKit
-import Alamofire
 
 class ViewController: UIViewController {
 
 	@IBOutlet weak var table: UITableView!
 
-	var dicUsers: [[String: AnyObject]] = []
+	var arrayUsers: [User] = []
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
-		getUser("dkhamsing")
-		getUser("lfarah")
-		getUser("krausefx")
 
+		let names = ["lfarah", "krausefx", "dkhamsing", "troydo42"]
+		UserManager().fetchUsers(names) { (users) in
+			self.arrayUsers = users
+			self.table.reloadData()
+		}
 	}
 
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
-	}
-
-	func getUser(user: String) {
-
-		Alamofire.request(.GET, "https://kodeo.herokuapp.com/getpointsForUser", parameters: ["user": user])
-			.responseJSON { response in
-
-				if let json = response.result.value {
-
-					self.dicUsers.append(json as! [String: AnyObject])
-					self.table.reloadData()
-					print(json)
-				}
-		}
-
 	}
 
 }
@@ -50,7 +36,7 @@ extension ViewController: UITableViewDataSource {
 
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
 	{
-		return self.dicUsers.count
+		return self.arrayUsers.count
 	}
 
 	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
@@ -61,13 +47,11 @@ extension ViewController: UITableViewDataSource {
 		}
 		// setup cell without force unwrapping it
 
-		let user = dicUsers[indexPath.row]
+		let user = arrayUsers[indexPath.row]
 
-		if let totalPoints = user["totalPoints"], username = user["username"] {
-			cell.textLabel!.text = "\(username)"
-			cell.detailTextLabel?.text = "\(totalPoints)"
-		}
-    
+		cell.textLabel!.text = user.name
+		cell.detailTextLabel?.text = "\(user.totalPoints)"
+
 		return cell
 	}
 }
