@@ -26,7 +26,7 @@ class UserManager: AnyObject {
 
 					let parsedUser = self.parseUser(json!)
 					self.users.append(parsedUser)
-          self.users.sortInPlace() { $0.totalPoints > $1.totalPoints } // sort the fruit by name
+					self.users.sortInPlace() { $0.totalPoints > $1.totalPoints } // sort the fruit by name
 
 					handler(users: self.users)
 				}
@@ -36,9 +36,9 @@ class UserManager: AnyObject {
 
 	func parseUser(user: [String: AnyObject]) -> User {
 
-		if let name = user["username"] as? String, totalPoints = user["totalPoints"] as? Int {
+		if let name = user["username"] as? String, totalPoints = user["totalPoints"] as? Int, userPicURL = user["userPic"] as? String {
 
-			let user = User(name: name, totalPoints: totalPoints)
+			let user = User(name: name, totalPoints: totalPoints, userPicURL: userPicURL)
 			return user
 		}
 		return User()

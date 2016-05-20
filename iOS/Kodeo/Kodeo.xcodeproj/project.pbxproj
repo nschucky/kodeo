@@ -15,6 +15,7 @@
 		C247713F1CEA95C000D67B3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C247713D1CEA95C000D67B3B /* LaunchScreen.storyboard */; };
 		C247714A1CEA95C000D67B3B /* KodeoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24771491CEA95C000D67B3B /* KodeoTests.swift */; };
 		C24771551CEA95C000D67B3B /* KodeoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24771541CEA95C000D67B3B /* KodeoUITests.swift */; };
+		C25095DD1CEEA41F007E2F36 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25095DC1CEEA41F007E2F36 /* UserTableViewCell.swift */; };
 		C2F3D8D31CED2FAF0064DF4B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F3D8D21CED2FAF0064DF4B /* User.swift */; };
 		C2F3D8D51CED323B0064DF4B /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F3D8D41CED323B0064DF4B /* UserManager.swift */; };
 		C2F3D8D71CED33FB0064DF4B /* Netwerker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F3D8D61CED33FB0064DF4B /* Netwerker.swift */; };
@@ -54,6 +55,7 @@
 		C24771501CEA95C000D67B3B /* KodeoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KodeoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C24771541CEA95C000D67B3B /* KodeoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KodeoUITests.swift; sourceTree = "<group>"; };
 		C24771561CEA95C000D67B3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C25095DC1CEEA41F007E2F36 /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		C2F3D8D21CED2FAF0064DF4B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C2F3D8D41CED323B0064DF4B /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		C2F3D8D61CED33FB0064DF4B /* Netwerker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Netwerker.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				C2F3D8D41CED323B0064DF4B /* UserManager.swift */,
 				C2F3D8D61CED33FB0064DF4B /* Netwerker.swift */,
 				C24771381CEA95C000D67B3B /* Main.storyboard */,
+				C25095DC1CEEA41F007E2F36 /* UserTableViewCell.swift */,
 				C247713B1CEA95C000D67B3B /* Assets.xcassets */,
 				C247713D1CEA95C000D67B3B /* LaunchScreen.storyboard */,
 				C24771401CEA95C000D67B3B /* Info.plist */,
@@ -344,6 +347,7 @@
 				C24771351CEA95C000D67B3B /* AppDelegate.swift in Sources */,
 				C2F3D8D51CED323B0064DF4B /* UserManager.swift in Sources */,
 				C2F3D8D31CED2FAF0064DF4B /* User.swift in Sources */,
+				C25095DD1CEEA41F007E2F36 /* UserTableViewCell.swift in Sources */,
 				C2F3D8D71CED33FB0064DF4B /* Netwerker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

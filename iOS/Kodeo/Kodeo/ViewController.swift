@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import EZSwiftExtensions
 
 class ViewController: UIViewController {
 
@@ -41,18 +42,31 @@ extension ViewController: UITableViewDataSource {
 
 	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
 	{
-		var cell = tableView.dequeueReusableCellWithIdentifier("cell") as! UITableViewCell!
+		var cell = tableView.dequeueReusableCellWithIdentifier("cell") as! UserTableViewCell!
 		if !(cell != nil) {
-			cell = UITableViewCell(style: .Default, reuseIdentifier: "cell")
+			cell = UserTableViewCell(style: .Default, reuseIdentifier: "cell")
 		}
 		// setup cell without force unwrapping it
 
 		let user = arrayUsers[indexPath.row]
 
-		cell.textLabel!.text = user.name
-		cell.detailTextLabel?.text = "\(user.totalPoints)"
-
-		return cell
+		cell.lblNameUser.text = user.name
+    
+    var points = "\(user.totalPoints)".bold()
+    points += NSAttributedString(string: " points")
+    
+    cell.lblPointsUser.attributedText = points
+    cell.imgvUser.image = user.userPic
+    
+    let ranking = indexPath.row + 1
+    
+    if ranking == 1 {
+      cell.lblRankingUser.backgroundColor = UIColor(red: 245/255, green: 166/255, blue: 35/255, alpha: 1)
+    }
+    
+    cell.lblRankingUser.text = "\(ranking)"
+    
+    return cell
 	}
 }
 

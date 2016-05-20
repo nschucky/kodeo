@@ -6,6 +6,8 @@
 target 'Kodeo' do
 
 pod 'Alamofire'
+pod 'EZSwiftExtensions'
+
 end
 
 target 'KodeoTests' do

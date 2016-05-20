@@ -1,10 +1,13 @@
 PODS:
   - Alamofire (3.4.0)
+  - EZSwiftExtensions (1.4)
 
 DEPENDENCIES:
   - Alamofire
+  - EZSwiftExtensions
 
 SPEC CHECKSUMS:
   Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
+  EZSwiftExtensions: db7be0022fce8e92cdfe0fadddaf835fcd9696db
 
 COCOAPODS: 0.39.0

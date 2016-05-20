@@ -21,6 +21,7 @@ class Netwerker: AnyObject {
 			.responseJSON { response in
 
 				if let json = response.result.value {
+          print(json)
 					handler(error: "", json: json as? [String: AnyObject])
 				} else {
           print("EROR")

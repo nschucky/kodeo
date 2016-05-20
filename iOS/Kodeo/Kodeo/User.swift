@@ -13,15 +13,22 @@ class User: AnyObject {
 
 	var name: String
 	var totalPoints: Int
+	var userPicURL: String
+	var userPic: UIImage?
 
-	init(name: String, totalPoints: Int) {
+	init(name: String, totalPoints: Int, userPicURL: String) {
 
 		self.name = name
 		self.totalPoints = totalPoints
+		self.userPicURL = userPicURL
+
+		let image = UIImage(data: NSData(contentsOfURL: NSURL(string: userPicURL)!)!)
+    self.userPic = image
 	}
 
 	init() {
 		self.name = ""
 		self.totalPoints = 0
+    self.userPicURL = ""
 	}
 }
