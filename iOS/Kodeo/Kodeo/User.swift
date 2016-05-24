@@ -15,20 +15,23 @@ class User: AnyObject {
 	var totalPoints: Int
 	var userPicURL: String
 	var userPic: UIImage?
+	var pointsDic: [String: Int]?
 
-	init(name: String, totalPoints: Int, userPicURL: String) {
+	init(name: String, totalPoints: Int, userPicURL: String, pointsDic: [String: Int]) {
 
 		self.name = name
 		self.totalPoints = totalPoints
 		self.userPicURL = userPicURL
+		self.pointsDic = pointsDic
 
 		let image = UIImage(data: NSData(contentsOfURL: NSURL(string: userPicURL)!)!)
-    self.userPic = image
+		self.userPic = image
+
 	}
 
 	init() {
 		self.name = ""
 		self.totalPoints = 0
-    self.userPicURL = ""
+		self.userPicURL = ""
 	}
 }

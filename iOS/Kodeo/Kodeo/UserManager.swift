@@ -38,10 +38,15 @@ class UserManager: AnyObject {
 
 		if let name = user["username"] as? String, totalPoints = user["totalPoints"] as? Int, userPicURL = user["userPic"] as? String {
 
-			let user = User(name: name, totalPoints: totalPoints, userPicURL: userPicURL)
+			guard let issueCommentEvent = user["IssueCommentEvent"] as? Int, issueEvent = user["IssueEvent"] as? Int, pushEvent = user["PushEvent"] as? Int, pullRequest = user["PushEvent"] as? Int else {
+
+				return User()
+			}
+
+			let dic = ["IssueCommentEvent": issueCommentEvent, "IssueEvent": issueEvent, "PushEvent": pushEvent, "PullRequestEvent": pullRequest]
+			let user = User(name: name, totalPoints: totalPoints, userPicURL: userPicURL, pointsDic: dic)
 			return user
 		}
 		return User()
 	}
-
 }
