@@ -78,11 +78,19 @@ extension ViewController: UITableViewDataSource {
 
 		return cell
 	}
+  
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    
+    if let detail = segue.destinationViewController as? DetailUserViewController {
+      detail.user = arrayUsers[sender as! Int]
+    }
+  }
 }
 
 extension ViewController: UITableViewDelegate {
 
 	func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-
+    
+    self.performSegueWithIdentifier("detail", sender: indexPath.row)
 	}
 }

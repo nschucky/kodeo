@@ -16,6 +16,8 @@
 		C247714A1CEA95C000D67B3B /* KodeoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24771491CEA95C000D67B3B /* KodeoTests.swift */; };
 		C24771551CEA95C000D67B3B /* KodeoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24771541CEA95C000D67B3B /* KodeoUITests.swift */; };
 		C25095DD1CEEA41F007E2F36 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25095DC1CEEA41F007E2F36 /* UserTableViewCell.swift */; };
+		C2DDEA881CF3D45D003E1BF3 /* DetailUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DDEA871CF3D45D003E1BF3 /* DetailUserViewController.swift */; };
+		C2DDEA8E1CF3DA36003E1BF3 /* FlowerChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DDEA8D1CF3DA36003E1BF3 /* FlowerChart.swift */; };
 		C2F3D8D31CED2FAF0064DF4B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F3D8D21CED2FAF0064DF4B /* User.swift */; };
 		C2F3D8D51CED323B0064DF4B /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F3D8D41CED323B0064DF4B /* UserManager.swift */; };
 		C2F3D8D71CED33FB0064DF4B /* Netwerker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F3D8D61CED33FB0064DF4B /* Netwerker.swift */; };
@@ -56,6 +58,8 @@
 		C24771541CEA95C000D67B3B /* KodeoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KodeoUITests.swift; sourceTree = "<group>"; };
 		C24771561CEA95C000D67B3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C25095DC1CEEA41F007E2F36 /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		C2DDEA871CF3D45D003E1BF3 /* DetailUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailUserViewController.swift; sourceTree = "<group>"; };
+		C2DDEA8D1CF3DA36003E1BF3 /* FlowerChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowerChart.swift; sourceTree = "<group>"; };
 		C2F3D8D21CED2FAF0064DF4B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C2F3D8D41CED323B0064DF4B /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		C2F3D8D61CED33FB0064DF4B /* Netwerker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Netwerker.swift; sourceTree = "<group>"; };
@@ -121,12 +125,12 @@
 			isa = PBXGroup;
 			children = (
 				C24771341CEA95C000D67B3B /* AppDelegate.swift */,
-				C24771361CEA95C000D67B3B /* ViewController.swift */,
-				C2F3D8D21CED2FAF0064DF4B /* User.swift */,
-				C2F3D8D41CED323B0064DF4B /* UserManager.swift */,
-				C2F3D8D61CED33FB0064DF4B /* Netwerker.swift */,
+				C2DDEA891CF3D466003E1BF3 /* Model */,
 				C24771381CEA95C000D67B3B /* Main.storyboard */,
+				C24771361CEA95C000D67B3B /* ViewController.swift */,
 				C25095DC1CEEA41F007E2F36 /* UserTableViewCell.swift */,
+				C2DDEA871CF3D45D003E1BF3 /* DetailUserViewController.swift */,
+				C2DDEA8D1CF3DA36003E1BF3 /* FlowerChart.swift */,
 				C247713B1CEA95C000D67B3B /* Assets.xcassets */,
 				C247713D1CEA95C000D67B3B /* LaunchScreen.storyboard */,
 				C24771401CEA95C000D67B3B /* Info.plist */,
@@ -150,6 +154,16 @@
 				C24771561CEA95C000D67B3B /* Info.plist */,
 			);
 			path = KodeoUITests;
+			sourceTree = "<group>";
+		};
+		C2DDEA891CF3D466003E1BF3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C2F3D8D61CED33FB0064DF4B /* Netwerker.swift */,
+				C2F3D8D21CED2FAF0064DF4B /* User.swift */,
+				C2F3D8D41CED323B0064DF4B /* UserManager.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		DEBB6DCC0C7F3564A1DF19F2 /* Pods */ = {
@@ -348,6 +362,8 @@
 				C2F3D8D51CED323B0064DF4B /* UserManager.swift in Sources */,
 				C2F3D8D31CED2FAF0064DF4B /* User.swift in Sources */,
 				C25095DD1CEEA41F007E2F36 /* UserTableViewCell.swift in Sources */,
+				C2DDEA8E1CF3DA36003E1BF3 /* FlowerChart.swift in Sources */,
+				C2DDEA881CF3D45D003E1BF3 /* DetailUserViewController.swift in Sources */,
 				C2F3D8D71CED33FB0064DF4B /* Netwerker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

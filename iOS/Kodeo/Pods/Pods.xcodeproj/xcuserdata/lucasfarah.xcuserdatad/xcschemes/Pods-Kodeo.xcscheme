@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '15EF46EAF58A6A33A4D44455'
+               BlueprintIdentifier = '70BE2289C1AA16EDA2A9A2A6'
                BlueprintName = 'Pods-Kodeo'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_Kodeo.framework'>
