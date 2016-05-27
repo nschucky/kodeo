@@ -18,6 +18,11 @@ class UserTableViewCell: UITableViewCell {
   
     override func awakeFromNib() {
         super.awakeFromNib()
+        imgvUser.layer.borderWidth = 0
+        imgvUser.layer.masksToBounds = false
+        imgvUser.layer.borderColor = UIColor.whiteColor().CGColor
+        imgvUser.layer.cornerRadius = imgvUser.frame.height/2
+        imgvUser.clipsToBounds = true
         // Initialization code
     }
 

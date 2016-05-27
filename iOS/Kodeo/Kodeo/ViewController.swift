@@ -63,7 +63,7 @@ extension ViewController: UITableViewDataSource {
 		cell.lblNameUser.text = user.name
 
 		var points = "\(user.totalPoints)".bold()
-		points += NSAttributedString(string: " points")
+		points += NSAttributedString(string: " pts")
 
 		cell.lblPointsUser.attributedText = points
 		cell.imgvUser.image = user.userPic
