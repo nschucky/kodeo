@@ -16,7 +16,7 @@ class DetailUserViewController: UIViewController {
 //  var colorsArray: [UIColor] = [UIColor.blackColor(),UIColor.blueColor(),UIColor.greenColor(),UIColor.grayColor()]
 //	let totalPetals = 4 // Set any number of petals you need
 
-    
+    @IBOutlet var userProfile: UIImageView!
     @IBOutlet var animatedGraph: UIView!
     @IBOutlet var Graph: UIView!
   
@@ -37,10 +37,16 @@ class DetailUserViewController: UIViewController {
 		super.viewDidLoad()
         graphView = GraphView(frame: self.animatedGraph.frame)
         graphView = createDarkGraph(self.view.frame)
-        
         graphView.setData(data, withLabels: labels)
-        self.view.addSubview(graphView)
         
+        self.view.addSubview(graphView)
+        self.userProfile.image = user.userPic
+        self.userProfile.layer.borderWidth = 0
+        self.userProfile.layer.masksToBounds = false
+        self.userProfile.layer.cornerRadius = userProfile.frame.height/2
+        self.userProfile.clipsToBounds = true
+        
+        print(user.userPic)
         setupConstraints()
         
 
