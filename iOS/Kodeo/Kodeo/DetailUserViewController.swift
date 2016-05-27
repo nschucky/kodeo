@@ -10,13 +10,14 @@ import UIKit
 
 class DetailUserViewController: UIViewController {
     
-	var user = User() 
+	var user = User()
 ////	var flowerChart: FlowerChart!
 //	var sizesArray = [5.0,6.0,7.0,8.0]
 //  var colorsArray: [UIColor] = [UIColor.blackColor(),UIColor.blueColor(),UIColor.greenColor(),UIColor.grayColor()]
 //	let totalPetals = 4 // Set any number of petals you need
 
     
+    @IBOutlet var animatedGraph: UIView!
     @IBOutlet var Graph: UIView!
   
     var graphView = GraphView()
@@ -34,7 +35,7 @@ class DetailUserViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-        graphView = GraphView(frame: self.Graph.frame)
+        graphView = GraphView(frame: self.animatedGraph.frame)
         graphView = createDarkGraph(self.view.frame)
         
         graphView.setData(data, withLabels: labels)
@@ -101,7 +102,7 @@ class DetailUserViewController: UIViewController {
         self.graphView.translatesAutoresizingMaskIntoConstraints = false
         graphConstraints.removeAll()
         
-        let topConstraint = NSLayoutConstraint(item: self.graphView, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.Top, multiplier: 1, constant: 0)
+        let topConstraint = NSLayoutConstraint(item: self.graphView, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.Top, multiplier: 1, constant: 250)
         let rightConstraint = NSLayoutConstraint(item: self.graphView, attribute: NSLayoutAttribute.Right, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.Right, multiplier: 1, constant: 0)
         let bottomConstraint = NSLayoutConstraint(item: self.graphView, attribute: NSLayoutAttribute.Bottom, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.Bottom, multiplier: 1, constant: 0)
         let leftConstraint = NSLayoutConstraint(item: self.graphView, attribute: NSLayoutAttribute.Left, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.Left, multiplier: 1, constant: 0)
