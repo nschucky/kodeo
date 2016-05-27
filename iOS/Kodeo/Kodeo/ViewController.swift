@@ -13,11 +13,19 @@ class ViewController: UIViewController {
 
 	@IBOutlet weak var table: UITableView!
 
+    @IBOutlet var topPanel: UIImageView!
 	var arrayUsers: [User] = []
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
+        
+        topPanel.layer.shadowColor = UIColor.blackColor().CGColor
+        topPanel.layer.shadowOffset = CGSizeMake(0, 2)
+        topPanel.layer.shadowOpacity = 1
+        topPanel.layer.shadowRadius = 1.0
+        topPanel.clipsToBounds = false
+        topPanel.layer.masksToBounds = false
 
 		fetchUsers()
 	}

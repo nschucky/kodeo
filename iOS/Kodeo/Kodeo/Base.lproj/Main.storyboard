@@ -14,6 +14,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="lke-Tn-rj9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.0" green="0.67450980392156867" blue="0.78823529411764703" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.92156862745098034" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="mZs-El-XMq"/>
@@ -107,6 +111,10 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="rVn-Sv-gtA"/>
                                 </connections>
                             </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vwE-EZ-6og">
+                                <rect key="frame" x="0.0" y="62" width="320" height="142"/>
+                                <color key="backgroundColor" red="0.0" green="0.67450980392156867" blue="0.78823529411764703" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KODEO iCon" translatesAutoresizingMaskIntoConstraints="NO" id="bfg-xv-iiO">
                                 <rect key="frame" x="101" y="72" width="109" height="107"/>
                             </imageView>
@@ -133,6 +141,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="table" destination="1hY-Qi-NBf" id="21J-KX-XoG"/>
+                        <outlet property="topPanel" destination="vwE-EZ-6og" id="775-nR-MuK"/>
                         <segue destination="5aQ-ry-MVm" kind="show" identifier="detail" id="Agt-YH-Qfn"/>
                     </connections>
                 </viewController>
