@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		299586A21CF83F51000C4249 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299586A11CF83F51000C4249 /* GraphView.swift */; };
+		299586A41CF84285000C4249 /* UIColor+colorFromHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299586A31CF84285000C4249 /* UIColor+colorFromHex.swift */; };
 		8472B2AFD10D9C5C6BD93229 /* Pods_Kodeo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 374C78265CB1C51958EFFE43 /* Pods_Kodeo.framework */; };
 		B4046351B43648C3C29BB91F /* Pods_KodeoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62D29F6F9CB5EA3135095DBC /* Pods_KodeoUITests.framework */; };
 		C24771351CEA95C000D67B3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24771341CEA95C000D67B3B /* AppDelegate.swift */; };
@@ -46,6 +48,8 @@
 		118BF98CC1FEDAE71F8ABEFD /* Pods-KodeoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KodeoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KodeoTests/Pods-KodeoTests.release.xcconfig"; sourceTree = "<group>"; };
 		11DA7A40EF0D8ECEA4093F10 /* Pods-KodeoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KodeoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KodeoUITests/Pods-KodeoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		25824C42118AFAC60111A479 /* Pods-KodeoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KodeoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KodeoUITests/Pods-KodeoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		299586A11CF83F51000C4249 /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
+		299586A31CF84285000C4249 /* UIColor+colorFromHex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+colorFromHex.swift"; sourceTree = "<group>"; };
 		374C78265CB1C51958EFFE43 /* Pods_Kodeo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kodeo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		62D29F6F9CB5EA3135095DBC /* Pods_KodeoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KodeoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DB86E1E6A6E335EF992F924 /* Pods-KodeoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KodeoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KodeoTests/Pods-KodeoTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -152,7 +156,9 @@
 				C24771341CEA95C000D67B3B /* AppDelegate.swift */,
 				C2DDEA891CF3D466003E1BF3 /* Model */,
 				C24771381CEA95C000D67B3B /* Main.storyboard */,
+				299586A31CF84285000C4249 /* UIColor+colorFromHex.swift */,
 				C24771361CEA95C000D67B3B /* ViewController.swift */,
+				299586A11CF83F51000C4249 /* GraphView.swift */,
 				C25095DC1CEEA41F007E2F36 /* UserTableViewCell.swift */,
 				C2DDEA871CF3D45D003E1BF3 /* DetailUserViewController.swift */,
 				C2DDEA8D1CF3DA36003E1BF3 /* FlowerChart.swift */,
@@ -455,10 +461,12 @@
 			files = (
 				C24771371CEA95C000D67B3B /* ViewController.swift in Sources */,
 				C24771351CEA95C000D67B3B /* AppDelegate.swift in Sources */,
+				299586A21CF83F51000C4249 /* GraphView.swift in Sources */,
 				C2F3D8D51CED323B0064DF4B /* UserManager.swift in Sources */,
 				C2F3D8D31CED2FAF0064DF4B /* User.swift in Sources */,
 				C25095DD1CEEA41F007E2F36 /* UserTableViewCell.swift in Sources */,
 				C2DDEA8E1CF3DA36003E1BF3 /* FlowerChart.swift in Sources */,
+				299586A41CF84285000C4249 /* UIColor+colorFromHex.swift in Sources */,
 				C2DDEA881CF3D45D003E1BF3 /* DetailUserViewController.swift in Sources */,
 				C2F3D8D71CED33FB0064DF4B /* Netwerker.swift in Sources */,
 			);

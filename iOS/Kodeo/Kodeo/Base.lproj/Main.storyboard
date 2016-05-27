@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -161,23 +160,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KTv-ud-kYP">
-                                <rect key="frame" x="40" y="91" width="240" height="240"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SXW-ZZ-ffc">
+                                <rect key="frame" x="0.0" y="216" width="320" height="352"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="KxV-Hs-eEt"/>
-                                    <constraint firstAttribute="width" secondItem="KTv-ud-kYP" secondAttribute="height" multiplier="1:1" id="SpV-gH-6TP"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="KTv-ud-kYP" firstAttribute="top" secondItem="uJE-4P-PZB" secondAttribute="bottom" constant="27" id="05e-au-Z42"/>
-                            <constraint firstItem="KTv-ud-kYP" firstAttribute="centerX" secondItem="GJ0-Hg-cCA" secondAttribute="centerX" id="cjh-Gi-Jke"/>
-                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="graph" destination="KTv-ud-kYP" id="pyb-FY-CPF"/>
+                        <outlet property="Graph" destination="SXW-ZZ-ffc" id="xN8-jP-Fgb"/>
+                        <outlet property="graphView" destination="SXW-ZZ-ffc" id="yER-Kd-upe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DK9-st-uj8" userLabel="First Responder" sceneMemberID="firstResponder"/>
