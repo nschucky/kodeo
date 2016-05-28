@@ -33,18 +33,23 @@ class UserManager: AnyObject {
 			}
 		}
 	}
-
+    //PullRequestEvent: 17,
+    //IssueEvent: 0,
+    //IssueCommentEvent: 42,
+    //PushEvent: 86,
 	func parseUser(user: [String: AnyObject]) -> User {
 
 		if let name = user["username"] as? String, totalPoints = user["totalPoints"] as? Int, userPicURL = user["userPic"] as? String {
 
-			guard let issueCommentEvent = user["IssueCommentEvent"] as? Int, issueEvent = user["IssueEvent"] as? Int, pushEvent = user["PushEvent"] as? Int, pullRequest = user["PushEvent"] as? Int else {
+			guard let issueCommentEvent = user["IssueCommentEvent"] as? Int, issueEvent = user["IssueEvent"] as? Int, pushEvent = user["PushEvent"] as? Int, pullRequest = user["PullRequestEvent"] as? Int else {
 
 				return User()
 			}
 
 			let dic = ["IssueCommentEvent": issueCommentEvent, "IssueEvent": issueEvent, "PushEvent": pushEvent, "PullRequestEvent": pullRequest]
-			let user = User(name: name, totalPoints: totalPoints, userPicURL: userPicURL, pointsDic: dic)
+            
+            let user = User(name: name, totalPoints: totalPoints, PullRequest: pullRequest, Push: pushEvent, NewIssue: issueEvent, Comment: issueCommentEvent, userPicURL: userPicURL, pointsDic: dic)
+
 			return user
 		}
 		return User()
