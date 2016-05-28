@@ -13,14 +13,24 @@ class User: AnyObject {
 
 	var name: String
 	var totalPoints: Int
+    var PullRequest: Int
+    var Push: Int
+    var NewIssue: Int
+    var Comment: Int
+    
 	var userPicURL: String
 	var userPic: UIImage?
 	var pointsDic: [String: Int]?
 
-	init(name: String, totalPoints: Int, userPicURL: String, pointsDic: [String: Int]) {
+    init(name: String, totalPoints: Int, PullRequest: Int, Push: Int, NewIssue: Int, Comment: Int, userPicURL: String, pointsDic: [String: Int]) {
 
 		self.name = name
 		self.totalPoints = totalPoints
+        self.PullRequest = PullRequest
+        self.Push = Push
+        self.NewIssue = NewIssue
+        self.Comment = Comment
+        
 		self.userPicURL = userPicURL
 		self.pointsDic = pointsDic
 
@@ -32,6 +42,10 @@ class User: AnyObject {
 	init() {
 		self.name = ""
 		self.totalPoints = 0
+        self.PullRequest = 0
+        self.Push = 0
+        self.NewIssue = 0
+        self.Comment = 0
 		self.userPicURL = ""
 	}
 }

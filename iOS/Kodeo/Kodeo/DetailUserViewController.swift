@@ -19,6 +19,13 @@ class DetailUserViewController: UIViewController {
     @IBOutlet var userProfile: UIImageView!
     @IBOutlet var animatedGraph: UIView!
     @IBOutlet var Graph: UIView!
+    
+    @IBOutlet var pullStats: UILabel!
+    @IBOutlet var pushStats: UILabel!
+    @IBOutlet var issueStats: UILabel!
+    @IBOutlet var commentStats: UILabel!
+    
+    
   
     var graphView = GraphView()
     var currentGraphType = GraphType.Dark
@@ -40,13 +47,26 @@ class DetailUserViewController: UIViewController {
         graphView.setData(data, withLabels: labels)
         
         self.view.addSubview(graphView)
+        print(user.userPic)
         self.userProfile.image = user.userPic
         self.userProfile.layer.borderWidth = 0
         self.userProfile.layer.masksToBounds = false
         self.userProfile.layer.cornerRadius = userProfile.frame.height/2
         self.userProfile.clipsToBounds = true
         
-        print(user.userPic)
+        
+        print(user.PullRequest)
+        self.pullStats.text = user.PullRequest.toString
+        
+        print(user.Push)
+        self.pushStats.text = user.Push.toString
+        
+        print(user.NewIssue)
+        self.issueStats.text = user.NewIssue.toString
+        
+        print(user.Comment)
+        self.commentStats.text = user.Comment.toString
+       
         setupConstraints()
         
 
