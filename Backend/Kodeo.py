@@ -13,9 +13,9 @@ def firstPage():
 
 @app.route('/getpointsForUser')
 def api_hello():
-	dic = {"username": "", "userPic": "", "totalPoints":0,"PushEvent":0,"PullRequestEvent":0,"IssueCommentEvent":0,"IssueEvent":0}
+	dic = {"username": "", "userPic": "", "totalPoints":0,"dailyPoints":[],"PushEvent":0,"PullRequestEvent":0,"IssueCommentEvent":0,"IssueEvent":0}
 	points = 0
-	dailyPoints = []
+	dailyPoints = {}
 	client_id = "39c9aaea6e3c93cc9247"
 	client_secret = "01203f23db09a26aa448511f9c0ddd68a2f7ad43"
 	user = request.args['user']
@@ -36,8 +36,7 @@ def api_hello():
 			dic["username"] = data[0]["actor"]["login"]
 
  		dateStr = data[0]["created_at"]
- 		print dateStr
-
+ 		print(dateStr)
 		commitDate = datetime.strptime(dateStr,'%Y-%m-%dT%H:%M:%SZ')
 		if abs(currentDate - commitDate).days >= 10:
 			break	
@@ -62,9 +61,11 @@ def api_hello():
 				points += 2
 				dic["IssueEvent"] += 1
 		print(points)	
-		dailyPoints.append(points)
+		
+		dailyPoints[dateStr] = points 
 
 	dic["totalPoints"] = points
+	dic["dailyPoints"] = dailyPoints
 	print dailyPoints
 	print points
 	return str(json.dumps(dic))
