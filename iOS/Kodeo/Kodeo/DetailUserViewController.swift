@@ -116,7 +116,7 @@ class DetailUserViewController: UIViewController {
     private func createDarkGraph(frame: CGRect) -> GraphView {
         let graphView = GraphView(frame: frame)
         
-        graphView.backgroundFillColor = UIColor.colorFromHex("#333333")
+        graphView.backgroundFillColor = UIColor.colorFromHex("#2c3e50")
         
         graphView.lineWidth = 1
         graphView.lineColor = UIColor.colorFromHex("#777777")
@@ -124,10 +124,10 @@ class DetailUserViewController: UIViewController {
         
         graphView.shouldFill = true
         graphView.fillType = GraphViewFillType.Gradient
-        graphView.fillColor = UIColor.colorFromHex("#555555")
+        graphView.fillColor = UIColor.colorFromHex("#00ACC9")
         graphView.fillGradientType = GraphViewGradientType.Linear
-        graphView.fillGradientStartColor = UIColor.colorFromHex("#555555")
-        graphView.fillGradientEndColor = UIColor.colorFromHex("#444444")
+        graphView.fillGradientStartColor = UIColor.colorFromHex("#00ACC9")
+        graphView.fillGradientEndColor = UIColor.colorFromHex("#2980b9")
         
         graphView.dataPointSpacing = 80
         graphView.dataPointSize = 2
@@ -153,7 +153,7 @@ class DetailUserViewController: UIViewController {
         self.graphView.translatesAutoresizingMaskIntoConstraints = false
         graphConstraints.removeAll()
         
-        let topConstraint = NSLayoutConstraint(item: self.graphView, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.Top, multiplier: 1, constant: 250)
+        let topConstraint = NSLayoutConstraint(item: self.graphView, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.Top, multiplier: 1, constant: 205)
         let rightConstraint = NSLayoutConstraint(item: self.graphView, attribute: NSLayoutAttribute.Right, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.Right, multiplier: 1, constant: 0)
         let bottomConstraint = NSLayoutConstraint(item: self.graphView, attribute: NSLayoutAttribute.Bottom, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.Bottom, multiplier: 1, constant: 0)
         let leftConstraint = NSLayoutConstraint(item: self.graphView, attribute: NSLayoutAttribute.Left, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.Left, multiplier: 1, constant: 0)
