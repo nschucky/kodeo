@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Kodeo/DetailUserViewController.swift"
-            timestampString = "486289551.599964"
+            timestampString = "486334836.525384"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "193"
-            endingLineNumber = "193"
+            startingLineNumber = "208"
+            endingLineNumber = "208"
             landmarkName = "next()"
             landmarkType = "5">
          </BreakpointContent>

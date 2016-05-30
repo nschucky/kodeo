@@ -8,6 +8,16 @@
 
 import UIKit
 
+
+extension _ArrayType where Generator.Element == String {
+    var doubleArray: [Double] {
+        return flatMap{ Double($0) }
+    }
+    var floatArray: [Float] {
+        return flatMap{ Float($0) }
+    }
+}
+
 class DetailUserViewController: UIViewController {
     
 	var user = User()
@@ -42,20 +52,23 @@ class DetailUserViewController: UIViewController {
     
     
     
-
 	override func viewDidLoad() {
         let dict = user.dailyPoints
         var labels = Array((dict!.keys))
         var data = Array(dict!.values)
         
-        let dataSet = [10.0,10.0,10.0,10.0,10.0,10.0,10.0,10.0,10.0,10.0]
-        let labelsSet = ["Feb 1","Feb 1","Feb 1","Feb 1","Feb 1","Feb 1","Feb 1","Feb 1","Feb 1","Feb 1"]
+        
+        var doubleData: [Double] = []
+        
+        for value in data {
+            doubleData.append(value.toDouble)
+        }
         
             
         super.viewDidLoad()
         graphView = GraphView(frame: self.animatedGraph.frame)
         graphView = createDarkGraph(self.view.frame)
-        graphView.setData(dataSet, withLabels: labels)
+        graphView.setData(doubleData, withLabels: labels)
     
         self.view.addSubview(graphView)
         print(user.userPic)
@@ -98,6 +111,7 @@ class DetailUserViewController: UIViewController {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
 	}
+    
 
     private func createDarkGraph(frame: CGRect) -> GraphView {
         let graphView = GraphView(frame: frame)
