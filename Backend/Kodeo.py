@@ -24,6 +24,8 @@ def api_hello():
 
 
 	for i in range(0,10):
+
+		dayPoints = 0
 		url = "https://api.github.com/users/" + user + "/events?page=" + str(i) + "&client_id=" + client_id + "&client_secret=" + client_secret
 		print url
 		response = urllib.urlopen(url)
@@ -41,28 +43,36 @@ def api_hello():
 		if abs(currentDate - commitDate).days >= 10:
 			break	
 
+		dateStr = dateStr[5:10]	
 		for commit in data:
 			payload = commit["payload"]
 			commitType = commit["type"]
 			print commitType
 			if commitType == "PushEvent":
 				points += 3
+				dayPoints += 3
 				dic["PushEvent"] += 1
 
 			elif commitType == "PullRequestEvent":
 				points += 4
+				dayPoints += 4
 				dic["PullRequestEvent"] += 1
 
 			elif commitType == "IssueCommentEvent":
 				points += 1
+				dayPoints += 1
 				dic["IssueCommentEvent"] += 1
 
 			elif commitType == "IssueEvent":
 				points += 2
+				dayPoints += 2
 				dic["IssueEvent"] += 1
 		print(points)	
 		
-		dailyPoints[dateStr] = points 
+		if dateStr in dailyPoints.keys():
+			dailyPoints[dateStr] += dayPoints
+		else: 
+			dailyPoints[dateStr] = dayPoints 
 
 	dic["totalPoints"] = points
 	dic["dailyPoints"] = dailyPoints
