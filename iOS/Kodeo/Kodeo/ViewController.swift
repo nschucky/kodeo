@@ -31,7 +31,7 @@ class ViewController: UIViewController {
 	}
 
 	func fetchUsers() {
-		let names = ["lfarah", "krausefx", "dkhamsing", "troydo42"]
+		let names = ["lfarah", "KrauseFx","troydo42", "goktugyil"]
 		UserManager().fetchUsers(names) { (users) in
 			self.arrayUsers = users
 			self.table.reloadData()

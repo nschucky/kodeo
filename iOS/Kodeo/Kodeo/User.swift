@@ -13,6 +13,7 @@ class User: AnyObject {
 
 	var name: String
 	var totalPoints: Int
+    var dailyPoints: [String: Int]?
     var PullRequest: Int
     var Push: Int
     var NewIssue: Int
@@ -22,7 +23,7 @@ class User: AnyObject {
 	var userPic: UIImage?
 	var pointsDic: [String: Int]?
 
-    init(name: String, totalPoints: Int, PullRequest: Int, Push: Int, NewIssue: Int, Comment: Int, userPicURL: String, pointsDic: [String: Int]) {
+    init(name: String, totalPoints: Int, PullRequest: Int, Push: Int, NewIssue: Int, Comment: Int, userPicURL: String, dailyPoints: [String: Int]?, pointsDic: [String: Int]) {
 
 		self.name = name
 		self.totalPoints = totalPoints
@@ -33,6 +34,7 @@ class User: AnyObject {
         
 		self.userPicURL = userPicURL
 		self.pointsDic = pointsDic
+        self.dailyPoints = dailyPoints
 
 		let image = UIImage(data: NSData(contentsOfURL: NSURL(string: userPicURL)!)!)
 		self.userPic = image
