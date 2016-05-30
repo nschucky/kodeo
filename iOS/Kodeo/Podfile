@@ -7,7 +7,6 @@ target 'Kodeo' do
 
 pod 'Alamofire'
 pod 'EZSwiftExtensions'
-pod 'DZNEmptyDataSet'
 
 end
 

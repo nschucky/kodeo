@@ -1,18 +1,15 @@
 PODS:
   - Alamofire (3.4.0)
-  - DZNEmptyDataSet (1.8.1)
   - EZSwiftExtensions (1.4)
 
 DEPENDENCIES:
   - Alamofire
-  - DZNEmptyDataSet
   - EZSwiftExtensions
 
 SPEC CHECKSUMS:
   Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
-  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   EZSwiftExtensions: db7be0022fce8e92cdfe0fadddaf835fcd9696db
 
-PODFILE CHECKSUM: 4b19c7924d224aa773a806f6b3e1872c3af2b5db
+PODFILE CHECKSUM: 6f98c85d962e934c47b36f3076ca82ca72453a76
 
 COCOAPODS: 1.0.0
