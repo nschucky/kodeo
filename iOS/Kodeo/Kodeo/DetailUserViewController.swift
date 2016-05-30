@@ -8,6 +8,16 @@
 
 import UIKit
 
+
+extension _ArrayType where Generator.Element == String {
+    var doubleArray: [Double] {
+        return flatMap{ Double($0) }
+    }
+    var floatArray: [Float] {
+        return flatMap{ Float($0) }
+    }
+}
+
 class DetailUserViewController: UIViewController {
     
 	var user = User()
@@ -35,17 +45,31 @@ class DetailUserViewController: UIViewController {
     var labelConstraints = [NSLayoutConstraint]()
     
     // Data
-    let numberOfDataItems = 29
+    let numberOfDataItems = 10
     
-    lazy var data: [Double] = self.generateRandomData(self.numberOfDataItems, max: 50)
-    lazy var labels: [String] = self.generateSequentialLabels(self.numberOfDataItems, text: "FEB")
-
+//    lazy var data: [Double] = self.generateRandomData(self.numberOfDataItems, max: 50)
+//    lazy var labels: [String] = self.generateSequentialLabels(self.numberOfDataItems, text: "FEB")
+    
+    
+    
 	override func viewDidLoad() {
-		super.viewDidLoad()
+        let dict = user.dailyPoints
+        var labels = Array((dict!.keys))
+        var data = Array(dict!.values)
+        
+        
+        var doubleData: [Double] = []
+        
+        for value in data {
+            doubleData.append(value.toDouble)
+        }
+        
+            
+        super.viewDidLoad()
         graphView = GraphView(frame: self.animatedGraph.frame)
         graphView = createDarkGraph(self.view.frame)
-        graphView.setData(data, withLabels: labels)
-        
+        graphView.setData(doubleData, withLabels: labels)
+    
         self.view.addSubview(graphView)
         print(user.userPic)
         self.userProfile.image = user.userPic
@@ -53,20 +77,20 @@ class DetailUserViewController: UIViewController {
         self.userProfile.layer.masksToBounds = false
         self.userProfile.layer.cornerRadius = userProfile.frame.height/2
         self.userProfile.clipsToBounds = true
-        
-        
+    
+    
         print(user.PullRequest)
         self.pullStats.text = user.PullRequest.toString
-        
+    
         print(user.Push)
         self.pushStats.text = user.Push.toString
-        
+    
         print(user.NewIssue)
         self.issueStats.text = user.NewIssue.toString
-        
+    
         print(user.Comment)
         self.commentStats.text = user.Comment.toString
-       
+   
         setupConstraints()
         
 
@@ -80,13 +104,14 @@ class DetailUserViewController: UIViewController {
 //		self.flowerChart = flowerChart
 //		flowerChart.drawFlower(colorsArray)
 //		flowerChart.setPetalSizes(sizesArray)
-    
+        
 	}
 
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
 	}
+    
 
     private func createDarkGraph(frame: CGRect) -> GraphView {
         let graphView = GraphView(frame: frame)
