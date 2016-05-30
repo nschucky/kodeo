@@ -40,7 +40,7 @@ class User: AnyObject {
 		self.userPic = image
 
 	}
-
+    
 	init() {
 		self.name = ""
 		self.totalPoints = 0
