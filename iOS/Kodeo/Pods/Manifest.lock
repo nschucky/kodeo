@@ -1,15 +1,18 @@
 PODS:
   - Alamofire (3.4.0)
   - EZSwiftExtensions (1.4)
+  - PullToBounce (0.0.3)
 
 DEPENDENCIES:
   - Alamofire
   - EZSwiftExtensions
+  - PullToBounce
 
 SPEC CHECKSUMS:
   Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
   EZSwiftExtensions: db7be0022fce8e92cdfe0fadddaf835fcd9696db
+  PullToBounce: d2c6300b92fa124f7133e0ca0088bbf7a7059194
 
-PODFILE CHECKSUM: 6f98c85d962e934c47b36f3076ca82ca72453a76
+PODFILE CHECKSUM: 3ddb90e8abf63f9e6ecc20da3395a00819051a9a
 
 COCOAPODS: 1.0.0
