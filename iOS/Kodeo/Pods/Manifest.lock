@@ -1,18 +1,19 @@
 PODS:
   - Alamofire (3.4.0)
+  - DGElasticPullToRefresh (1.0.3)
   - EZSwiftExtensions (1.4)
   - PullToBounce (0.0.3)
 
 DEPENDENCIES:
   - Alamofire
+  - DGElasticPullToRefresh
   - EZSwiftExtensions
   - PullToBounce
 
 SPEC CHECKSUMS:
   Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
+  DGElasticPullToRefresh: 040f39ae69840b3261d163fe6735c5901bf851e9
   EZSwiftExtensions: db7be0022fce8e92cdfe0fadddaf835fcd9696db
   PullToBounce: d2c6300b92fa124f7133e0ca0088bbf7a7059194
 
-PODFILE CHECKSUM: 3ddb90e8abf63f9e6ecc20da3395a00819051a9a
-
-COCOAPODS: 1.0.0
+COCOAPODS: 0.39.0

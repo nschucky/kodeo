@@ -6,38 +6,33 @@
 	<dict>
 		<key>Alamofire.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>DGElasticPullToRefresh.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>EZSwiftExtensions.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-Kodeo.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
-		</dict>
-		<key>Pods-KodeoTests.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>4</integer>
-		</dict>
-		<key>Pods-KodeoUITests.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>5</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>PullToBounce.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>6</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1C712B655035C8232D422E50285C2C91</key>
+		<key>115824B7CB2E76E5ACB836A251E79404</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -47,22 +42,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8619C46CE00B4D402470BC89BB444C10</key>
+		<key>B9ECA07C9E952014997C6151A8326DC3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8C286B5BA6775B13286C77808CF72A23</key>
+		<key>C33B7AEC1A93F1591AEB3B2F91EA3807</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>CC2C6E66CADF0C9F76F897D03F533C69</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>EB8660EBACD43D42CB311417A1921117</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -1,6 +1,0 @@
-framework module Pods_KodeoUITests {
-  umbrella header "Pods-KodeoUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}

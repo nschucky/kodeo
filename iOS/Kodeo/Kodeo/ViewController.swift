@@ -8,30 +8,43 @@
 
 import UIKit
 import EZSwiftExtensions
+import DGElasticPullToRefresh
 
 class ViewController: UIViewController {
 
 	@IBOutlet weak var table: UITableView!
 
-    @IBOutlet var topPanel: UIImageView!
+	@IBOutlet var topPanel: UIImageView!
 	var arrayUsers: [User] = []
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
-        
-        topPanel.layer.shadowColor = UIColor.blackColor().CGColor
-        topPanel.layer.shadowOffset = CGSizeMake(0, 2)
-        topPanel.layer.shadowOpacity = 1
-        topPanel.layer.shadowRadius = 1.0
-        topPanel.clipsToBounds = false
-        topPanel.layer.masksToBounds = false
+
+		topPanel.layer.shadowColor = UIColor.blackColor().CGColor
+		topPanel.layer.shadowOffset = CGSizeMake(0, 2)
+		topPanel.layer.shadowOpacity = 1
+		topPanel.layer.shadowRadius = 1.0
+		topPanel.clipsToBounds = false
+		topPanel.layer.masksToBounds = false
+
+		let loadingView = DGElasticPullToRefreshLoadingViewCircle()
+		loadingView.tintColor = UIColor(red: 78 / 255.0, green: 221 / 255.0, blue: 200 / 255.0, alpha: 1.0)
+		table.dg_addPullToRefreshWithActionHandler({ [weak self]() -> Void in
+			// Add your logic here
+			// Do not forget to call dg_stopLoading() at the end
+			self!.fetchUsers()
+      
+			self!.table.dg_stopLoading()
+			}, loadingView: loadingView)
+		table.dg_setPullToRefreshFillColor(UIColor(red: 57 / 255.0, green: 67 / 255.0, blue: 89 / 255.0, alpha: 1.0))
+		table.dg_setPullToRefreshBackgroundColor(table.backgroundColor!)
 
 		fetchUsers()
 	}
 
 	func fetchUsers() {
-		let names = ["lfarah", "KrauseFx","troydo42", "goktugyil"]
+		let names = ["lfarah", "KrauseFx", "troydo42", "goktugyil"]
 		UserManager().fetchUsers(names) { (users) in
 			self.arrayUsers = users
 			self.table.reloadData()
@@ -41,14 +54,18 @@ class ViewController: UIViewController {
 
 	@IBAction func butRefresh(sender: AnyObject) {
 
-    fetchUsers()
+		fetchUsers()
 	}
-  
+
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
 	}
 
+}
+
+extension UIScrollView {
+  func dg_stopScrollingAnimation() {}
 }
 
 extension ViewController: UITableViewDataSource {
@@ -86,19 +103,19 @@ extension ViewController: UITableViewDataSource {
 
 		return cell
 	}
-  
-  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    
-    if let detail = segue.destinationViewController as? DetailUserViewController {
-      detail.user = arrayUsers[sender as! Int]
-    }
-  }
+
+	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+
+		if let detail = segue.destinationViewController as? DetailUserViewController {
+			detail.user = arrayUsers[sender as! Int]
+		}
+	}
 }
 
 extension ViewController: UITableViewDelegate {
 
 	func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    
-    self.performSegueWithIdentifier("detail", sender: indexPath.row)
+
+		self.performSegueWithIdentifier("detail", sender: indexPath.row)
 	}
 }

@@ -8,6 +8,7 @@ target 'Kodeo' do
 pod 'Alamofire'
 pod 'EZSwiftExtensions'
 pod 'PullToBounce'
+pod 'DGElasticPullToRefresh'
 
 end
 
