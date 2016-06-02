@@ -31,6 +31,99 @@
             </objects>
             <point key="canvasLocation" x="-312" y="103"/>
         </scene>
+        <!--Add Friend View Controller-->
+        <scene sceneID="5bw-zV-dGI">
+            <objects>
+                <viewController id="6tz-3I-OYG" customClass="AddFriendViewController" customModule="Kodeo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mHb-5V-Iln"/>
+                        <viewControllerLayoutGuide type="bottom" id="Wg2-gp-U5f"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Vjf-uY-NnZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" misplaced="YES" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="2L5-q9-Rtp">
+                                <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="6tz-3I-OYG" id="f2V-Tq-6fm"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rG2-dP-AvO">
+                                <rect key="frame" x="0.0" y="108" width="320" height="460"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="90" id="t9N-gQ-U22" customClass="FriendTableViewCell" customModule="Kodeo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="90"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="t9N-gQ-U22" id="7Zm-SH-MG2">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="89.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Troy Do" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IbQ-gi-LXK">
+                                                    <rect key="frame" x="87" y="26" width="225" height="36"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userPicture" translatesAutoresizingMaskIntoConstraints="NO" id="4Ou-eP-VEo">
+                                                    <rect key="frame" x="8" y="8" width="71" height="71"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="4Ou-eP-VEo" secondAttribute="height" multiplier="1:1" id="Rbn-Oe-tVh"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="4Ou-eP-VEo" firstAttribute="top" secondItem="7Zm-SH-MG2" secondAttribute="topMargin" id="63Y-za-OQs"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="4Ou-eP-VEo" secondAttribute="bottom" constant="2.5" id="7sK-zf-LCf"/>
+                                                <constraint firstItem="IbQ-gi-LXK" firstAttribute="centerY" secondItem="4Ou-eP-VEo" secondAttribute="centerY" id="TWw-Vb-SC3"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="IbQ-gi-LXK" secondAttribute="trailing" id="YVg-Sq-14l"/>
+                                                <constraint firstItem="IbQ-gi-LXK" firstAttribute="leading" secondItem="4Ou-eP-VEo" secondAttribute="trailing" constant="8" id="mbW-Hl-ykj"/>
+                                                <constraint firstItem="4Ou-eP-VEo" firstAttribute="leading" secondItem="7Zm-SH-MG2" secondAttribute="leadingMargin" id="qT8-ry-7tA"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imgvFriend" destination="4Ou-eP-VEo" id="Q25-3E-R4G"/>
+                                            <outlet property="lblNameFriend" destination="IbQ-gi-LXK" id="J2y-hT-Ihb"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="6tz-3I-OYG" id="qOf-qY-kuB"/>
+                                    <outlet property="delegate" destination="6tz-3I-OYG" id="18J-NG-JU7"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2L5-q9-Rtp" firstAttribute="top" secondItem="mHb-5V-Iln" secondAttribute="bottom" id="6CY-c6-TNz"/>
+                            <constraint firstItem="rG2-dP-AvO" firstAttribute="top" secondItem="2L5-q9-Rtp" secondAttribute="bottom" id="CUh-p6-0HN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rG2-dP-AvO" secondAttribute="trailing" constant="-20" id="Gee-2C-Q4u"/>
+                            <constraint firstItem="2L5-q9-Rtp" firstAttribute="leading" secondItem="Vjf-uY-NnZ" secondAttribute="leadingMargin" constant="-20" id="fmo-1N-cEw"/>
+                            <constraint firstItem="rG2-dP-AvO" firstAttribute="leading" secondItem="Vjf-uY-NnZ" secondAttribute="leadingMargin" constant="-20" id="iyN-0K-esv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2L5-q9-Rtp" secondAttribute="trailing" constant="-20" id="pre-qo-bzy"/>
+                            <constraint firstItem="Wg2-gp-U5f" firstAttribute="top" secondItem="rG2-dP-AvO" secondAttribute="bottom" id="zP0-I5-zZG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="search" destination="2L5-q9-Rtp" id="B1i-mm-0Je"/>
+                        <outlet property="searchDisplayController" destination="M0p-sY-XW5" id="iS1-zQ-bYA"/>
+                        <outlet property="table" destination="rG2-dP-AvO" id="RFR-OW-twp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Le-hs-AhU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="M0p-sY-XW5">
+                    <connections>
+                        <outlet property="delegate" destination="6tz-3I-OYG" id="kKV-dc-2Tw"/>
+                        <outlet property="searchContentsController" destination="6tz-3I-OYG" id="ZOs-Go-JIc"/>
+                        <outlet property="searchResultsDataSource" destination="6tz-3I-OYG" id="0or-xI-2vG"/>
+                        <outlet property="searchResultsDelegate" destination="6tz-3I-OYG" id="6we-MW-cxq"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="287" y="-639"/>
+        </scene>
         <!--KODEO-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -60,12 +153,6 @@
                                                     <color key="textColor" red="0.17254901960784313" green="0.24313725490196078" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userPicture" translatesAutoresizingMaskIntoConstraints="NO" id="UVp-rj-WO1">
-                                                    <rect key="frame" x="44" y="8" width="71" height="71"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="71" id="uTD-km-HAg"/>
-                                                    </constraints>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="495 pts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KoD-Ka-Pzy">
                                                     <rect key="frame" x="212" y="24" width="100" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="21"/>
@@ -82,6 +169,12 @@
                                                     <color key="textColor" red="0.17254901960784313" green="0.24313725490196078" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userPicture" translatesAutoresizingMaskIntoConstraints="NO" id="UVp-rj-WO1">
+                                                    <rect key="frame" x="44" y="8" width="71" height="71"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="71" id="uTD-km-HAg"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" red="0.92549019607843142" green="0.94117647058823528" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
@@ -145,9 +238,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="KODEO" id="Fr5-vx-LNx">
-                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="Rtp-yw-Rv5">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Rtp-yw-Rv5">
                             <connections>
-                                <action selector="butRefresh:" destination="BYZ-38-t0r" id="fxf-EU-1OD"/>
+                                <segue destination="6tz-3I-OYG" kind="show" id="pCr-LU-QgS"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

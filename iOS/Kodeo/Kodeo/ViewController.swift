@@ -34,7 +34,7 @@ class ViewController: UIViewController {
 			// Add your logic here
 			// Do not forget to call dg_stopLoading() at the end
 			self!.fetchUsers()
-      
+
 			self!.table.dg_stopLoading()
 			}, loadingView: loadingView)
 		table.dg_setPullToRefreshFillColor(UIColor(red: 57 / 255.0, green: 67 / 255.0, blue: 89 / 255.0, alpha: 1.0))
@@ -44,12 +44,14 @@ class ViewController: UIViewController {
 	}
 
 	func fetchUsers() {
-		let names = ["lfarah", "KrauseFx", "troydo42", "goktugyil"]
-		UserManager().fetchUsers(names) { (users) in
-			self.arrayUsers = users
-			self.table.reloadData()
-		}
 
+		if let arrUsers = NSUserDefaults.standardUserDefaults().arrayForKey("arrUsers") as? [String] {
+
+			UserManager().fetchUsers(arrUsers) { (users) in
+				self.arrayUsers = users
+				self.table.reloadData()
+			}
+    }
 	}
 
 	@IBAction func butRefresh(sender: AnyObject) {
@@ -65,7 +67,7 @@ class ViewController: UIViewController {
 }
 
 extension UIScrollView {
-  func dg_stopScrollingAnimation() {}
+	func dg_stopScrollingAnimation() { }
 }
 
 extension ViewController: UITableViewDataSource {

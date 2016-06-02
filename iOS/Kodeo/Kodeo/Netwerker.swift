@@ -21,13 +21,31 @@ class Netwerker: AnyObject {
 			.responseJSON { response in
 
 				if let json = response.result.value {
-          print(json)
+					print(json)
 					handler(error: "", json: json as? [String: AnyObject])
 				} else {
-          print("EROR")
+					print("EROR")
 					handler(error: "NetworkError", json: nil)
 				}
 		}
 	}
 
+	func searchUser(user: String, handler: (error: String, json: [String: AnyObject]?) -> ()) {
+
+		let cleanUser = user.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
+    
+		let url = "https://api.github.com/search/users?q=\(cleanUser)&client_id=39c9aaea6e3c93cc9247&client_secret=01203f23db09a26aa448511f9c0ddd68a2f7ad43"
+		Alamofire.request(.GET, url, parameters: [:])
+			.responseJSON { response in
+
+				if let json = response.result.value {
+					print(json)
+					handler(error: "", json: json as? [String: AnyObject])
+				} else {
+					print("ERROR")
+					print(response)
+					handler(error: "NetworkError", json: nil)
+				}
+		}
+	}
 }
