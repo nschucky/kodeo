@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '5E3B1158ACBB616BDA545DED'
-               BlueprintName = 'Pods-Kodeo'
+               BlueprintIdentifier = '115824B7CB2E76E5ACB836A251E79404'
+               BlueprintName = 'DGElasticPullToRefresh'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Pods_Kodeo.framework'>
+               BuildableName = 'DGElasticPullToRefresh.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
