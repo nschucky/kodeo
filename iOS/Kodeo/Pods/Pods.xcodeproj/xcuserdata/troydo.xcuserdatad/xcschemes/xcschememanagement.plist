@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>DGElasticPullToRefresh.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>EZSwiftExtensions.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,7 +42,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1C712B655035C8232D422E50285C2C91</key>
+		<key>115824B7CB2E76E5ACB836A251E79404</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6E8B52BECED022E643BF4002EDE6E570</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -57,12 +67,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CC2C6E66CADF0C9F76F897D03F533C69</key>
+		<key>B3F615A6341FB9F1C993153173E84F47</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EB8660EBACD43D42CB311417A1921117</key>
+		<key>CC2C6E66CADF0C9F76F897D03F533C69</key>
 		<dict>
 			<key>primary</key>
 			<true/>
