@@ -137,7 +137,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1hY-Qi-NBf">
-                                <rect key="frame" x="0.0" y="136" width="320" height="432"/>
+                                <rect key="frame" x="0.0" y="160" width="320" height="408"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="90" id="UF2-Bq-Amo" customClass="UserTableViewCell" customModule="Kodeo" customModuleProvider="target">
@@ -209,11 +209,11 @@
                                 </connections>
                             </tableView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vwE-EZ-6og">
-                                <rect key="frame" x="0.0" y="62" width="320" height="142"/>
+                                <rect key="frame" x="0.0" y="62" width="320" height="164"/>
                                 <color key="backgroundColor" red="0.0" green="0.67450980392156867" blue="0.78823529411764703" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.0" green="0.67450980392156867" blue="0.78823529411764703" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="vwE-EZ-6og" secondAttribute="height" multiplier="160:71" id="7Hq-hO-64s"/>
+                                    <constraint firstAttribute="width" secondItem="vwE-EZ-6og" secondAttribute="height" multiplier="160:71" constant="-49.577464788732414" id="7Hq-hO-64s"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="KODEO iCon" translatesAutoresizingMaskIntoConstraints="NO" id="bfg-xv-iiO">
@@ -222,17 +222,25 @@
                                     <constraint firstAttribute="width" secondItem="bfg-xv-iiO" secondAttribute="height" multiplier="109:107" id="QcT-HO-E8D"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Github Rank" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uE8-Ag-JIs">
+                                <rect key="frame" x="68" y="194" width="185" height="32"/>
+                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="28"/>
+                                <color key="textColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="1hY-Qi-NBf" firstAttribute="top" secondItem="vwE-EZ-6og" secondAttribute="bottom" constant="-68" id="22G-CX-UFt"/>
+                            <constraint firstItem="1hY-Qi-NBf" firstAttribute="top" secondItem="vwE-EZ-6og" secondAttribute="bottom" constant="-66" id="22G-CX-UFt"/>
                             <constraint firstAttribute="trailing" secondItem="1hY-Qi-NBf" secondAttribute="trailing" id="5C4-7Y-3bs"/>
                             <constraint firstItem="1hY-Qi-NBf" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="K9T-fo-84f"/>
                             <constraint firstItem="bfg-xv-iiO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="NlO-di-uVv"/>
                             <constraint firstItem="1hY-Qi-NBf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="VuB-9c-P0U"/>
                             <constraint firstItem="bfg-xv-iiO" firstAttribute="centerX" secondItem="vwE-EZ-6og" secondAttribute="centerX" id="VuP-gq-ZZF"/>
-                            <constraint firstItem="bfg-xv-iiO" firstAttribute="centerY" secondItem="vwE-EZ-6og" secondAttribute="centerY" id="aQI-eD-BzU"/>
+                            <constraint firstItem="bfg-xv-iiO" firstAttribute="centerY" secondItem="vwE-EZ-6og" secondAttribute="centerY" constant="-11.5" id="aQI-eD-BzU"/>
                             <constraint firstItem="vwE-EZ-6og" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="frX-md-idt"/>
+                            <constraint firstItem="uE8-Ag-JIs" firstAttribute="centerX" secondItem="vwE-EZ-6og" secondAttribute="centerX" id="kKq-eJ-t0Q"/>
+                            <constraint firstItem="1hY-Qi-NBf" firstAttribute="top" secondItem="uE8-Ag-JIs" secondAttribute="bottom" constant="-66" id="kVd-dX-G6x"/>
                             <constraint firstItem="vwE-EZ-6og" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="62" id="meC-xs-cs8"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vwE-EZ-6og" secondAttribute="trailing" constant="-20" id="uH0-Tv-0hs"/>
                         </constraints>

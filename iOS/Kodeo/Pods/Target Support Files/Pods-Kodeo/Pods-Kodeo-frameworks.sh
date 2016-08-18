@@ -86,6 +86,7 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
   install_framework "$BUILT_PRODUCTS_DIR/DGElasticPullToRefresh/DGElasticPullToRefresh.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/DZNEmptyDataSet/DZNEmptyDataSet.framework"
   install_framework "$BUILT_PRODUCTS_DIR/EZLoadingActivity/EZLoadingActivity.framework"
   install_framework "$BUILT_PRODUCTS_DIR/EZSwiftExtensions/EZSwiftExtensions.framework"
   install_framework "$BUILT_PRODUCTS_DIR/MGSwipeTableCell/MGSwipeTableCell.framework"
@@ -94,6 +95,7 @@ fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
   install_framework "$BUILT_PRODUCTS_DIR/DGElasticPullToRefresh/DGElasticPullToRefresh.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/DZNEmptyDataSet/DZNEmptyDataSet.framework"
   install_framework "$BUILT_PRODUCTS_DIR/EZLoadingActivity/EZLoadingActivity.framework"
   install_framework "$BUILT_PRODUCTS_DIR/EZSwiftExtensions/EZSwiftExtensions.framework"
   install_framework "$BUILT_PRODUCTS_DIR/MGSwipeTableCell/MGSwipeTableCell.framework"

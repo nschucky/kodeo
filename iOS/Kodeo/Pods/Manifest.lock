@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (3.4.0)
   - DGElasticPullToRefresh (1.0.3)
+  - DZNEmptyDataSet (1.8.1)
   - EZLoadingActivity (0.8)
   - EZSwiftExtensions (1.4)
   - MGSwipeTableCell (1.5.5)
@@ -9,6 +10,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - DGElasticPullToRefresh
+  - DZNEmptyDataSet
   - EZLoadingActivity
   - EZSwiftExtensions
   - MGSwipeTableCell
@@ -17,11 +19,12 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
   DGElasticPullToRefresh: 040f39ae69840b3261d163fe6735c5901bf851e9
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   EZLoadingActivity: 6fd75a05765a4085f4b6fef6f62edf9f144b3139
   EZSwiftExtensions: db7be0022fce8e92cdfe0fadddaf835fcd9696db
   MGSwipeTableCell: bafeb5f351124544c9364ecbdf24c7b06a37d340
   PullToBounce: d2c6300b92fa124f7133e0ca0088bbf7a7059194
 
-PODFILE CHECKSUM: 4af44c8a757166fbfd25267a2f577472cd5b655c
+PODFILE CHECKSUM: aa7fbece7e706314afa87be854baa9e438804f75
 
 COCOAPODS: 1.0.1

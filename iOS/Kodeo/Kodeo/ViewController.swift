@@ -11,6 +11,7 @@ import EZSwiftExtensions
 import DGElasticPullToRefresh
 import MGSwipeTableCell
 import EZLoadingActivity
+import DZNEmptyDataSet
 
 class ViewController: UIViewController {
 
@@ -44,15 +45,19 @@ class ViewController: UIViewController {
 		table.dg_setPullToRefreshBackgroundColor(table.backgroundColor!)
 
 		fetchUsers()
-        
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(fetchUsers), name: "updateUsers", object: nil)
 
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(fetchUsers), name: "updateUsers", object: nil)
+
+		self.table.emptyDataSetSource = self
+		self.table.emptyDataSetDelegate = self
+
+		// A little trick for removing the cell separators
+		self.table.tableFooterView = UIView()
 	}
 
 	func fetchUsers() {
 
 		if let arrUsers = NSUserDefaults.standardUserDefaults().arrayForKey("arrUsers") as? [String] {
-
 
 			manager.fetchUsers(arrUsers) { (users) in
 				self.arrayUsers = users
@@ -158,5 +163,22 @@ extension ViewController: UITableViewDelegate {
 
 		self.performSegueWithIdentifier("detail", sender: indexPath.row)
 	}
+}
+
+extension ViewController: DZNEmptyDataSetSource {
+
+	func titleForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
+
+		return NSAttributedString(string: "Where are your friends?")
+	}
+
+	func descriptionForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
+
+		return NSAttributedString(string: "Use the + button to add Github users you know")
+	}
+}
+
+extension ViewController: DZNEmptyDataSetDelegate {
+
 }
 
