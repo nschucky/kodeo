@@ -65,6 +65,8 @@ extension AddFriendViewController: UITableViewDelegate {
 			if !(newArr.contains(selectedItem["username"]!)) {
 				newArr.append(selectedItem["username"]!)
 				NSUserDefaults.standardUserDefaults().setObject(newArr, forKey: "arrUsers")
+				NSNotificationCenter.defaultCenter().postNotificationName("updateUsers", object: nil)
+
 			}
 		} else {
 

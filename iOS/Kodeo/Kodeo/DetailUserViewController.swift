@@ -60,10 +60,10 @@ class DetailUserViewController: UIViewController {
 //    lazy var labels: [String] = self.generateSequentialLabels(self.numberOfDataItems, text: "FEB")
 
 	override func viewDidLoad() {
-		var dict = user.dailyPoints
+		let dict = user.dailyPoints
 //dict = dict.sort { $0.0 < $1.0 }
-		var labels = getSortedKeys(dict)
-		var data = getSortedValues(dict)
+		let labels = getSortedKeys(dict)
+		let data = getSortedValues(dict)
 
 		var doubleData: [Double] = []
 

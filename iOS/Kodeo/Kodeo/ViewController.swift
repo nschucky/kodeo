@@ -44,6 +44,9 @@ class ViewController: UIViewController {
 		table.dg_setPullToRefreshBackgroundColor(table.backgroundColor!)
 
 		fetchUsers()
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(fetchUsers), name: "updateUsers", object: nil)
+
 	}
 
 	func fetchUsers() {
