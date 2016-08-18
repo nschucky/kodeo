@@ -9,13 +9,14 @@
 import UIKit
 import EZSwiftExtensions
 import DGElasticPullToRefresh
-
+import MGSwipeTableCell
 class ViewController: UIViewController {
 
 	@IBOutlet weak var table: UITableView!
 
 	@IBOutlet var topPanel: UIImageView!
 	var arrayUsers: [User] = []
+	var manager = UserManager()
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -47,7 +48,7 @@ class ViewController: UIViewController {
 
 		if let arrUsers = NSUserDefaults.standardUserDefaults().arrayForKey("arrUsers") as? [String] {
 
-			UserManager().fetchUsers(arrUsers) { (users) in
+			manager.fetchUsers(arrUsers) { (users) in
 				self.arrayUsers = users
 				self.table.reloadData()
 			}
@@ -64,10 +65,10 @@ class ViewController: UIViewController {
 		// Dispose of any resources that can be recreated.
 	}
 
-    func uniq<S: SequenceType, E: Hashable where E==S.Generator.Element>(source: S) -> [E] {
-        var seen: [E:Bool] = [:]
-        return source.filter { seen.updateValue(true, forKey: $0) == nil }
-    }
+	func uniq < S: SequenceType, E: Hashable where E == S.Generator.Element > (source: S) -> [E] {
+		var seen: [E: Bool] = [:]
+		return source.filter { seen.updateValue(true, forKey: $0) == nil }
+	}
 
 }
 
@@ -108,6 +109,26 @@ extension ViewController: UITableViewDataSource {
 
 		cell.lblRankingUser.text = "\(ranking)"
 
+		// Sliding
+		cell.rightButtons = [MGSwipeButton(title: "Delete", backgroundColor: UIColor.redColor(), callback: {
+			(sender: MGSwipeTableCell!) -> Bool in
+			print("Convenience callback for swipe buttons!")
+			self.arrayUsers.removeAtIndex((self.table.indexPathForCell(cell)?.row)!)
+
+			var names: [String] = []
+			for user in self.arrayUsers {
+
+				names.append(user.name)
+			}
+			NSUserDefaults.standardUserDefaults().setObject(names, forKey: "arrUsers")
+			NSUserDefaults.standardUserDefaults().synchronize()
+
+			self.table.reloadData()
+			return true
+			})
+		]
+		cell.leftSwipeSettings.transition = MGSwipeTransition.Rotate3D
+
 		return cell
 	}
 
@@ -115,11 +136,11 @@ extension ViewController: UITableViewDataSource {
 
 		if let detail = segue.destinationViewController as? DetailUserViewController {
 			detail.user = arrayUsers[sender as! Int]
-            
-            let backItem = UIBarButtonItem()
-            backItem.title = ""
 
-            navigationItem.backBarButtonItem = backItem
+			let backItem = UIBarButtonItem()
+			backItem.title = ""
+
+			navigationItem.backBarButtonItem = backItem
 		}
 	}
 }

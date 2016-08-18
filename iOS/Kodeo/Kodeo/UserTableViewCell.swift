@@ -7,8 +7,8 @@
 //
 
 import UIKit
-
-class UserTableViewCell: UITableViewCell {
+import MGSwipeTableCell
+class UserTableViewCell: MGSwipeTableCell {
 
   @IBOutlet weak var imgvUser: UIImageView!
   @IBOutlet weak var lblNameUser: UILabel!
