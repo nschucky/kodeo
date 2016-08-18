@@ -8,7 +8,7 @@
 
 import UIKit
 import Alamofire
-
+import EZLoadingActivity
 class UserManager: AnyObject {
 
 	var users: [User] = []
@@ -20,6 +20,9 @@ class UserManager: AnyObject {
 	func fetchUsers(usernameArray: [String], handler: (users: [User]) -> ()) {
 
         self.users.removeAll()
+        EZLoadingActivity.show("Loading...", disableUI: false)
+
+        var count = 0
 		for user in usernameArray {
 
 			Netwerker().downloadUser(user) { (error, json) in
@@ -28,11 +31,19 @@ class UserManager: AnyObject {
 					let parsedUser = self.parseUser(json!)
 					self.users.append(parsedUser)
 					self.users.sortInPlace() { $0.totalPoints > $1.totalPoints } // sort the fruit by name
-
+                    
+                    count += 1
+                    if count == usernameArray.count {
+                        
+                        EZLoadingActivity.hide(success: true, animated: true)
+                    }
+                    
 					handler(users: self.users)
 				}
 			}
 		}
+        
+
 	}
 	// PullRequestEvent: 17,
 	// IssueEvent: 0,

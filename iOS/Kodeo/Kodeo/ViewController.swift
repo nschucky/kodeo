@@ -10,6 +10,8 @@ import UIKit
 import EZSwiftExtensions
 import DGElasticPullToRefresh
 import MGSwipeTableCell
+import EZLoadingActivity
+
 class ViewController: UIViewController {
 
 	@IBOutlet weak var table: UITableView!
@@ -48,9 +50,11 @@ class ViewController: UIViewController {
 
 		if let arrUsers = NSUserDefaults.standardUserDefaults().arrayForKey("arrUsers") as? [String] {
 
+
 			manager.fetchUsers(arrUsers) { (users) in
 				self.arrayUsers = users
 				self.table.reloadData()
+
 			}
 		}
 	}
