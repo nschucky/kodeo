@@ -51,7 +51,7 @@ class ViewController: UIViewController {
 				self.arrayUsers = users
 				self.table.reloadData()
 			}
-    }
+		}
 	}
 
 	@IBAction func butRefresh(sender: AnyObject) {
@@ -63,6 +63,11 @@ class ViewController: UIViewController {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
 	}
+
+    func uniq<S: SequenceType, E: Hashable where E==S.Generator.Element>(source: S) -> [E] {
+        var seen: [E:Bool] = [:]
+        return source.filter { seen.updateValue(true, forKey: $0) == nil }
+    }
 
 }
 
@@ -110,6 +115,11 @@ extension ViewController: UITableViewDataSource {
 
 		if let detail = segue.destinationViewController as? DetailUserViewController {
 			detail.user = arrayUsers[sender as! Int]
+            
+            let backItem = UIBarButtonItem()
+            backItem.title = ""
+
+            navigationItem.backBarButtonItem = backItem
 		}
 	}
 }
@@ -121,3 +131,4 @@ extension ViewController: UITableViewDelegate {
 		self.performSegueWithIdentifier("detail", sender: indexPath.row)
 	}
 }
+

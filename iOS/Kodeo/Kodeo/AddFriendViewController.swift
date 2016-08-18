@@ -55,32 +55,34 @@ extension AddFriendViewController: UITableViewDataSource {
 }
 
 extension AddFriendViewController: UITableViewDelegate {
-  
-  func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    
-    let selectedItem = self.searchItems[indexPath.row]
-    if let arrUsers = NSUserDefaults.standardUserDefaults().arrayForKey("arrUsers") {
-      
-      var newArr = arrUsers as! [String]
-      newArr.append(selectedItem["username"]!)
-      NSUserDefaults.standardUserDefaults().setObject(newArr, forKey: "arrUsers")
-    } else {
-      
-      let arrUsers: [String] = [selectedItem["username"]!]
-      NSUserDefaults.standardUserDefaults().setObject(arrUsers, forKey: "arrUsers")
-    }
-    
-    self.navigationController?.popViewControllerAnimated(true)
-  }
+
+	func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+
+		let selectedItem = self.searchItems[indexPath.row]
+		if let arrUsers = NSUserDefaults.standardUserDefaults().arrayForKey("arrUsers") {
+
+			var newArr = arrUsers as! [String]
+			if !(newArr.contains(selectedItem["username"]!)) {
+				newArr.append(selectedItem["username"]!)
+				NSUserDefaults.standardUserDefaults().setObject(newArr, forKey: "arrUsers")
+			}
+		} else {
+
+			let arrUsers: [String] = [selectedItem["username"]!]
+			NSUserDefaults.standardUserDefaults().setObject(arrUsers, forKey: "arrUsers")
+		}
+
+		self.navigationController?.popViewControllerAnimated(true)
+	}
 }
 
 extension AddFriendViewController: UISearchBarDelegate {
 
 	func searchBarSearchButtonClicked(searchBar: UISearchBar) {
 
-    searchBar.resignFirstResponder()
-    self.searchItems.removeAll()
-    
+		searchBar.resignFirstResponder()
+		self.searchItems.removeAll()
+
 		print(searchBar.text!)
 		Netwerker().searchUser(searchBar.text!) { (error, json) in
 
@@ -92,7 +94,7 @@ extension AddFriendViewController: UISearchBarDelegate {
 
 				self.searchItems.append(user)
 			}
-      
+
 			self.table.reloadData()
 		}
 		print("SEARCH 3")
