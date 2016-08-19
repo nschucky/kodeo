@@ -83,8 +83,12 @@ def api_hello():
 	dic["totalPoints"] = points
 	dic["dailyPoints"] = dailyPoints
 
-	content = requests.get("https://github.com/users/%s/contributions" % user).text
-	lines = content.splitlines()
+	content = urllib.urlopen("https://github.com/users/%s/contributions" % user)
+	contentTxt = content.read()
+	print "=================================="
+	print contentTxt
+	print "=================================="
+	lines = contentTxt.splitlines()
 	lines = [x.strip() for x in lines]
 	lines = [x for x in lines if x.startswith('<rect class="day"')]
 	contribs = []
@@ -105,6 +109,9 @@ def api_hello():
 	while cur[0] != 0:
 		streak += 1
 		cur = contribs.pop()
+	print "=================================="
+	print streak
+	print "=================================="
 
 	dic["ContributionStreak"] = streak
 
