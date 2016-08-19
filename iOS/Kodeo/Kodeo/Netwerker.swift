@@ -17,14 +17,14 @@ class Netwerker: AnyObject {
 
 	func downloadUser(user: String, handler: (error: String, json: [String: AnyObject]?) -> ()) {
 
-		Alamofire.request(.GET, "https://secure-castle-66440.herokuapp.com/getpointsForUser", parameters: ["user": user])
+		Alamofire.request(.GET, "https://kodeo.herokuapp.com/getpointsForUser", parameters: ["user": user])
 			.responseJSON { response in
 
 				if let json = response.result.value {
 					print(json)
 					handler(error: "", json: json as? [String: AnyObject])
 				} else {
-					print("EROR")
+					print("ERROR")
 					handler(error: "NetworkError", json: nil)
 				}
 		}

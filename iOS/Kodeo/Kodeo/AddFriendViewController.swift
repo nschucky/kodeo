@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DZNEmptyDataSet
 
 class AddFriendViewController: UIViewController {
 
@@ -20,6 +21,12 @@ class AddFriendViewController: UIViewController {
 		super.viewDidLoad()
 
 		// Do any additional setup after loading the view.
+		self.table.emptyDataSetSource = self
+
+		// A little trick for removing the cell separators
+		self.table.tableFooterView = UIView()
+
+        self.title = "New Github user"
 	}
 
 	override func didReceiveMemoryWarning() {
@@ -66,8 +73,8 @@ extension AddFriendViewController: UITableViewDelegate {
 				newArr.append(selectedItem["username"]!)
 				NSUserDefaults.standardUserDefaults().setObject(newArr, forKey: "arrUsers")
 				NSUserDefaults.standardUserDefaults().synchronize()
-                
-                NSNotificationCenter.defaultCenter().postNotificationName("updateUsers", object: nil)
+
+				NSNotificationCenter.defaultCenter().postNotificationName("updateUsers", object: nil)
 
 			}
 		} else {
@@ -102,5 +109,18 @@ extension AddFriendViewController: UISearchBarDelegate {
 			self.table.reloadData()
 		}
 		print("SEARCH 3")
+	}
+}
+
+extension AddFriendViewController: DZNEmptyDataSetSource {
+
+	func titleForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
+
+		return NSAttributedString(string: "Searching for something?")
+	}
+
+	func descriptionForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
+
+		return NSAttributedString(string: "Search for a Github user")
 	}
 }

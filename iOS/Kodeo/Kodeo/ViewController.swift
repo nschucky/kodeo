@@ -174,7 +174,7 @@ extension ViewController: DZNEmptyDataSetSource {
 
 	func descriptionForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
 
-		return NSAttributedString(string: "Use the + button to add Github users you know")
+		return NSAttributedString(string: "Use the + button to add your Github user")
 	}
 }
 
