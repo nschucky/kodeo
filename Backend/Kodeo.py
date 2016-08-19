@@ -13,7 +13,7 @@ def firstPage():
 
 @app.route('/getpointsForUser')
 def api_hello():
-	dic = {"username": "", "userPic": "", "totalPoints":0,"dailyPoints":[],"PushEvent":0,"PullRequestEvent":0,"IssueCommentEvent":0,"IssueEvent":0}
+	dic = {"username": "", "userPic": "", "totalPoints":0,"dailyPoints":[],"PushEvent":0,"PullRequestEvent":0,"IssueCommentEvent":0,"IssueEvent":0, "CommitEvent": 0}
 	points = 0
 	dailyPoints = {}
 	client_id = "39c9aaea6e3c93cc9247"
