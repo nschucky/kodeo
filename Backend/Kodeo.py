@@ -83,12 +83,47 @@ def api_hello():
 	dic["totalPoints"] = points
 	dic["dailyPoints"] = dailyPoints
 
-	content = urllib.urlopen("https://github.com/users/%s/contributions" % user)
-	contentTxt = content.read()
-	print "=================================="
-	print contentTxt
-	print "=================================="
-	lines = contentTxt.splitlines()
+	# content = urllib.urlopen("https://github.com/users/%s/contributions" % user)
+	# contentTxt = content.read()
+	# print "=================================="
+	# print contentTxt
+	# print "=================================="
+	# lines = contentTxt.splitlines()
+	# lines = [x.strip() for x in lines]
+	# lines = [x for x in lines if x.startswith('<rect class="day"')]
+	# contribs = []
+	# offset = len("data-count=")
+	# for line in lines:
+	# 	idx = line.find("data-count=") + offset + 1
+	# 	line = line[idx:]
+	# 	parts = line.split('"')
+	# 	count = int(parts[0])
+	# 	date = datetime.strptime(parts[2], "%Y-%m-%d")
+	# 	contribs.append((count, date))
+
+	# cur = contribs.pop()
+	# while cur[1] >= datetime.today():
+	# 	cur = contribs.pop()  
+
+	# streak = 0
+	# while cur[0] != 0:
+	# 	streak += 1
+	# 	cur = contribs.pop()
+	# print "=================================="
+	# print streak
+	# print "=================================="
+
+	# dic["ContributionStreak"] = streak
+
+	print dailyPoints
+	print points
+	return str(json.dumps(dic))
+
+@app.route('/getStreakForUser')
+def get_contributions_for_user():
+	username = request.args['user']
+	content = requests.get("https://github.com/users/%s/contributions" % username).text
+	lines = content.splitlines()
 	lines = [x.strip() for x in lines]
 	lines = [x for x in lines if x.startswith('<rect class="day"')]
 	contribs = []
@@ -101,23 +136,22 @@ def api_hello():
 		date = datetime.strptime(parts[2], "%Y-%m-%d")
 		contribs.append((count, date))
 
+	if not contribs:
+		return 'error'
+
 	cur = contribs.pop()
 	while cur[1] >= datetime.today():
 		cur = contribs.pop()  
+
+	if not contribs:
+		return 'error'
 
 	streak = 0
 	while cur[0] != 0:
 		streak += 1
 		cur = contribs.pop()
-	print "=================================="
-	print streak
-	print "=================================="
 
-	dic["ContributionStreak"] = streak
-
-	print dailyPoints
-	print points
-	return str(json.dumps(dic))
+	return str(streak)
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
