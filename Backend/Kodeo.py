@@ -63,7 +63,7 @@ def api_hello():
 				dayPoints += 1
 				dic["IssueCommentEvent"] += 1
 
-			elif commitType == "IssueEvent":
+			elif commitType == "IssuesEvent":
 				points += 2
 				dayPoints += 2
 				dic["IssueEvent"] += 1
