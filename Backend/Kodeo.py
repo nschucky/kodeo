@@ -4,6 +4,7 @@ from datetime import datetime
 import time
 from flask import Flask,request,jsonify
 import os
+import ghstreak
 
 app = Flask(__name__)
 
@@ -13,7 +14,7 @@ def firstPage():
 
 @app.route('/getpointsForUser')
 def api_hello():
-	dic = {"username": "", "userPic": "", "totalPoints":0,"dailyPoints":[],"PushEvent":0,"PullRequestEvent":0,"IssueCommentEvent":0,"IssueEvent":0, "CommitEvent": 0}
+	dic = {"username": "", "userPic": "", "totalPoints":0,"dailyPoints":[],"PushEvent":0,"PullRequestEvent":0,"IssueCommentEvent":0,"IssueEvent":0, "CommitEvent": 0, "CurrentStreak": 0}
 	points = 0
 	dailyPoints = {}
 	client_id = "39c9aaea6e3c93cc9247"
@@ -80,6 +81,8 @@ def api_hello():
 
 	dic["totalPoints"] = points
 	dic["dailyPoints"] = dailyPoints
+	dic["CurrentStreak"] = ghstreak.get_streak_for_user(user)
+	
 	print dailyPoints
 	print points
 	return str(json.dumps(dic))
